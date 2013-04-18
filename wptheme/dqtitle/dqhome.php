@@ -24,11 +24,12 @@ get_header(); ?>
 <a href="http://www.dataquick.com/testimonials/" class="more" target="_blank">More Testimonials &raquo;</a>
 </div>
 <div class="b dqn">
-<a href="http://www.dqnews.com/" class="hdr" target="_blank"><span class="typeface-js">DQ News</span><span class="ar"></span></a>
-<div class="inside" id="newshere">
-Loading...
-</div>
-<a href="http://www.dqnews.com/" class="more" target="_blank">More in DQ News &raquo;</a>
+<a href="http://www.dataquick.com/research/" class="hdr" target="_blank"><span class="typeface-js">Research Highlights</span><span class="ar"></span></a>
+
+<?php
+readfile('http://www.dataquick.com/researchhighlighthelper/');
+?>
+<a href="http://www.dataquick.com/research/" class="more" target="_blank">More in Research Highlights &raquo;</a>
 </div>
 <div class="b dqb">
 <a href="http://www.dataquick.com/blog/" class="hdr" target="_blank"><span class="typeface-js">DataQuick Blog</span><span class="ar"></span></a>
