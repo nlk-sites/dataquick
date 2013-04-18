@@ -1,0 +1,292 @@
+/*
+Theme Name: DQ
+Theme URI: http://www.dataquick.com/
+Description: Theme for <a href="http://www.dataquick.com">DataQuick</a>, designed and built by <a href="http://www.ninthlink.com">Ninthlink, Inc</a>.
+Author: Ninthlink, Inc.
+Version: 1.1
+Tags: fixed-width
+*/
+
+body { margin: 0; padding: 0; text-align: center; font: 13px/20px Arial, Helvetica, sans-serif; color: #333; background: no-repeat 50% 99px }
+body.home { background-image: url(images/bg_home.jpg) }
+body.rels { background-image: url(images/bg_reinvest.jpg) }
+body.lend { background-image: url(images/bg_lending.jpg) }
+body.blog { background-image: url(images/bg_blog.jpg) }
+body.abt { background-image: url(images/bg_about.jpg) }
+body.cus { background: url(images/bg_custom.jpg) no-repeat 50% 55px }
+body.ind { background: url(images/bg_industry.jpg) no-repeat 50% 55px }
+body.pro { background: url(images/bg_products.jpg) no-repeat 50% 55px }
+a img { border: none }
+#page { display: block; width: 978px; margin: 0 auto; text-align: left }
+#hdr { float: left; width: 978px; height: 99px; position: relative; background:url(images/tab.png) no-repeat 719px 0; z-index:2 }
+#hdr a { color: #333; text-decoration: none }
+#hdr .contact { position: absolute; top: 60px; right: 26px; font: 16px/143% "Helvetica Neue"; z-index: 2 }
+#hdr .contact a { text-decoration: none; color:#333 }
+#dq { float: left; width: 196px; height: 63px; margin: 15px 0 0 18px; text-indent:-999em; background: url(images/logo.png) no-repeat 0 0 }
+#ipc { float: left; margin: 62px 0 0 58px; padding: 0; list-style: none; position: relative; z-index: 3 }
+#ipc li { float: left }
+#ipc li.on { font-weight: bold }
+#ipc li.page-item-21 { width: 148px }
+#ipc li.page-item-19 { margin-right:34px; width: 127px; text-align: center; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf }
+body.ind #ipc li.page-item-21 a, body.pro #ipc li.page-item-19 a, #ipc li.on, body.cus #ipc li.page-item-17 a, body.cus #ipc li.page-item-2965 a { color:#fff; font-weight: bold }
+#ipc li.on a { color: #333 !important }
+body.ind #ipc li.page-item-19 { border-left: none }
+body.pro #ipc li.page-item-19 { border: none; margin-right: 35px }
+#abt { position: absolute; top: 11px; right: 288px; font-size: 11px }
+#drp, #drp ul {position: relative; z-index: 2 }
+#drp { position:absolute; top: 98px; left: 242px; float: left; padding: 0; border-top:1px solid #dfdfdf; display: none }
+#drp .t { float: left; width: 181px; height: 45px; background: url(images/ttab.png) no-repeat 0 -45px; position: absolute; top: -45px; left:0; z-index:3 }
+#drp ul { margin: 0 -4px 0 0; padding: 12px 0; width: 240px; border-left: 1px solid #dfdfdf; background: url(images/ttmid.png) repeat-y 100% 0; list-style: none; font-size: 12px }
+#drp .e { float: left; width:inherit; height: 4px; background: url(images/ttend.png) no-repeat bottom right }
+#drp a span.ar { position: relative; top: -2px; font-size: 10px }
+body.ind #drp.nav0 { left: 245px }
+#drp.l1 { left: 420px }
+#drp.l2 { left: 548px }
+#drp.l1 .t, #drp.l2 .t { background-position: 0 0 }
+#drp ul li { position: relative; padding: 0 0 0 25px }
+#drp ul ul.sub-menu { display: none; background-position: 0 0; border: 1px solid #dfdfdf; position: absolute; top: -13px; right: -206px; width: 190px; padding: 12px }
+#drp ul li.menu-item-192 ul.sub-menu { padding-right: 0; width: 217px; right: -221px }
+#drp ul ul.sub-menu li { padding: 0 }
+#ql { width: 214px; position: absolute; top: 11px; right: 20px; font: 12px/20px Arial, Helvetica, sans-serif }
+#rfx { display: none; width: 700px; height: 340px; background: url(images/fx.gif) repeat 0 0; position: absolute; top: 33px; left: 201px; z-index:1 }
+h1, #top .h1 { font: 48px/51px "Helvetica Neue"; margin: 27px 0 1px; position: relative }
+h2 { font: 22px/26px Arial, Helvetica, sans-serif; margin: 0 }
+h3 { font: 20px/24px "Helvetica Neue"; margin: 0 }
+h4 { font-size: 14px; color: #000; font-weight: normal; margin: 0}
+p { margin-top: 0 }
+h1 span.tm { font-size: 27px; line-height: 27px; position: relative; top: -20px; height: 27px }
+
+#main, #home, #top, #fx { float: left; display: inline; width: 979px; margin: 0 }
+#home { width: 940px; height: 379px; padding: 21px 0 0 38px }
+#home h1 { font-size: 38px; line-height:41px; color: #fff; margin: 41px 0 36px }
+#home h2, #home.typeface-js p { color: #e6d097; font: 19px/24px "Rockwell"; margin: 0; letter-spacing:1px }
+#hbar { float: left; width: 979px }
+body.home #main { position: relative }
+#top { width: 570px; height:282px; padding: 0 370px 0 39px; color: #fff; font-weight: bold; position: relative; z-index: 1 }
+#top.typeface-js p { font: 13px/125% "ArialRoundedMTBold"; margin: 13px 0 0 }
+#home.typeface-js p { display: none; width: 490px }
+#top h2, #top .h2 { color: #F1E4B5; font: 18px/22px "Rockwell" }
+#top.typeface-js .h2 p { font: 18px/22px "Rockwell"; margin: 0 }
+body.rels .edit-link { position: absolute; top: 100px }
+body.blog #top { width:683px; padding: 0 255px 0 41px; height: 134px; background: url(images/bg_blog.jpg) no-repeat -102px 0 }
+#top.typeface-js .h2 p { margin: 0; font-family: "Rockwell" }
+body.blog #main { background: url(images/right.gif) repeat-y 100% 0 }
+body.blog #fx { background: url(images/right_end.gif) no-repeat 100% 100% }
+body.col3 #main { background: url(images/side.gif) repeat-y 0 0; margin-left: 8px}
+body.col3 #fx { background: url(images/right_end.gif) no-repeat -28px 100% }
+body.col3 #content { float: right; width: 710px; margin-right: 5px }
+#lc { float: left; width: 222px; background:url(images/side_about.jpg) no-repeat 0 0; font-size: 12px }
+#content .main { float: left; width: 589px; margin-left: 41px }
+#main .entry a, #content .main a, .postmeta a, .b.ri a.arrow { font-weight: bold; color: #333; text-decoration: underline }
+#main .entry a.arrow, #content .main a.arrow, .b.ri a.arrow { padding-left: 11px; background: url(images/arrow.gif) no-repeat left center; font-weight: normal; text-decoration: none }
+#main .entry a.arrow:hover, #content .main a.arrow:hover, .b.ri a.arrow:hover { font-weight: bold }
+#content .main ul.nob { margin: 0; padding: 0; list-style: none; width: 453px }
+#content .main ul.nob a { font-weight: normal; text-decoration: none }
+#content .main h2 { font: 25px/30px "Helvetica Neue" }
+body.col3 #content .main { width: 433px; margin: 10px 0 0 }
+body.col3.col2 #content .main { width: 695px }
+body.cus #lc { background-image: url(images/side_research.jpg) }
+body.ind #lc { background-image: url(images/side_industry.jpg) }
+body.ind #top h2, body.ind #top .h2, body.cus #top h2, body.cus #top .h2 { color: #C4DCF1 }
+body.pro #lc { background-image: url(images/side_products.jpg) }
+body.pro #top h2, body.pro #top .h2 { color: #D7F3BF }
+body.rels #top h2, body.rels #top .h2 { color: #F2E5BF }
+body.col3 #top { padding: 0; width: 701px; height: 155px }
+body.cus #top { height: 155px }
+#lc a { color: #494949; text-decoration: none }
+#lc a.first { float: left; width: 182px; display:inline; padding: 12px 20px 0; height: 28px; margin-top: 20px; font:12px/15px "ArialRoundedMTBold"; color: #000; text-transform:uppercase }
+#lc ul { float: left; display: inline; width: 220px; margin: 0 1px; padding: 0; list-style: none }
+#lc ul ul, #clogins, #commentform p.form-allowed-tags { display: none }
+#lc ul li { float: left }
+#lc ul li a { float: left; display: inline; width: 201px; height: 27px; padding: 6px 0 0 19px; background: url(images/side.png) no-repeat 0 100% }
+#lc ul li a:hover, #lc ul li.current_page_item a, #lc ul li.current_page_ancestor a { color: #000; background-position: 0 0 }
+#lc ul li.current_page_item ul, #lc ul li.current_page_ancestor ul { display: block; line-height: 16px; position: relative; top: -8px }
+#lc ul li.current_page_item ul li a, #lc ul li.current_page_ancestor ul li a { height: auto; padding-top: 0; background: none; color:#666 }
+#lc ul li.current_page_ancestor ul li.current-menu-item a { color: #000; text-decoration: underline }
+#lc ul li#menu-item-244 a { font-size:18px; line-height:20px; font-weight: bold; background-position: -31px 100%; color: #333 }
+#lc ul li#menu-item-244 a:hover { background-position: -31px 0 }
+#lc a.cs { float: left; width: 182px; height: 54px; background: url(images/support.png) no-repeat 0 0; padding: 13px 0 0 20px; margin: 8px 9px }
+#lc a.cs strong { display: block; font-size: 18px; font-weight: normal }
+
+#left { float: left; width: 609px; margin: 0 0 0 41px }
+#left .post { float: left; width: 609px; margin: 40px 0 0 }
+#left .post h2 { font-family: "Helvetica Neue" }
+ul#rt { float: left; position: relative; margin: -39px 0 0 79px; padding: 14px 0 0 21px; list-style: none; width: 229px; background: url(images/right.png) no-repeat 0 0; z-index: 1}
+ul#rt a { color: #333; text-decoration: none }
+ul#rt li { margin: 0 0 15px; padding: 0 9px 10px; border-bottom: 1px solid #ccc; width: 196px }
+ul#rt li h3 { font-size: 13px; margin: 0 }
+ul#rt li ul { margin: 5px 0 10px; padding: 0; list-style: none }
+ul#rt li ul li { margin: 0; padding: 0; border-bottom: none }
+
+h2.entry-title a { color: #333; text-decoration: none }
+.post .by { font-size: 12px }
+.postmeta { float: left; width: 610px; height: 29px; padding: 7px 0 0 3px; position: relative; left: -1px; background: url(images/postmeta.png) no-repeat 0 0 }
+.postmeta .comments-link, .postmeta .st_sharethis, .postmeta .cats { float: left; margin-left: 10px }
+.postmeta .cats { width: 387px }
+.postmeta .st_sharethis { float: right; margin-right: 10px }
+.postmeta a { text-decoration: none }
+.postmeta .cats a { font-weight: normal }
+
+.b { float: left; width: 287px; position: relative; height: 337px; background: url(images/block_l.gif) no-repeat 100% 100% }
+.b a.hdr { float: left; margin: 10px 0 25px; color: #fff; text-decoration: none }
+.b a.hdr span.typeface-js { font: 16px/120% "ArialRoundedMTBold"; float: left }
+.b a.hdr span.ar  {float: right; width: 5px; height: 9px; background: url(images/ar.gif) no-repeat 0 0; margin: 6px 0 0 10px }
+.b .inside { float: left; width: 100%; height: 255px }
+#newshere { height: 255px }
+.b .inside h3 { font: 15px/120% Arial, Helvetica, sans-serif; margin: 0 }
+.b .inside p { margin: 5px 0 19px }
+.b .inside a { text-decoration: none; color:#831126 }
+.b .inside h3 a { color:#000 }
+.b a.more { float: left; width: 100%; color: #333; text-decoration: none; font: 11px/15px Verdana, Geneva, sans-serif }
+.b.test { width: 246px; padding: 0 52px 0 26px }
+.b.dqn { margin: 0 29px 0 35px; font-size: 12px; line-height: 17px }
+.b.dqb { background: none; font-size: 12px; line-height: 17px }
+.b.dqn .rh img { width: 260px; height: auto }
+
+.b.get { width: 323px; background: url(images/block_get.png) no-repeat 0 0; margin: -20px 0 0 -9px; padding: 0 7px; height: auto }
+.b.get.c { height: 441px }
+.b.get h3 { margin: 17px 27px 20px; font: 24px/28px Arial, Helvetica, sans-serif; color: #831127 }
+.b.get a.ar, .b.get.c div { float: left; width: 296px; padding: 14px 0 0 27px; height: 39px; font-size: 14px; background:url(images/ar.png) no-repeat 289px 50%; text-decoration: none; color: #333 }
+.b.get.c div { background: none }
+
+h3.b.h1 { width: 325px; height: 151px; margin: 0; font: 13px/18px Arial, Helvetica, sans-serif; background: url(images/block_h1.png) no-repeat 0 0 }
+h3.b.h1.real { width: 255px; height: 137px; padding: 14px 45px 0 25px }
+h3.b.h1.real a { color: #333; text-decoration: none; display: block; margin-top: 6px }
+h3.b.h1.blue a { float: left; width: 235px; height: 131px; background: url(images/fx.gif) repeat; padding: 20px 55px 0 35px; color: #333; text-decoration: none }
+h3.b.h1 a strong { font: 19px/120% "ArialRoundedMTBold"; color: #831127; padding-right: 15px; background: url(images/har.gif) no-repeat 100% 8px }
+h3.b.h1 a span.txt { display:block }
+h3.b.h1 a span.txt { margin-top: 8px }
+h3.b.h1.blue a strong { color: #00788e; background-image: url(images/harb.gif) }
+.b.cyc a { position: absolute; top: 0; left: 0 }
+
+.b.ri { padding: 16px 14px 0 39px; width: 269px; height: 405px; background-image: url(images/block_tall.png); line-height: 18px }
+.b.ri ul { margin: 0; padding: 0; list-style: none; font-size:12px }
+.b.ri ul li { margin: 0 0 6px; padding: 0 0 0 11px; background: url(images/lar.gif) no-repeat 0 50%  }
+.b.ri ul li a { color: #494949; text-decoration: none; font-weight: bold }
+.b.ri ul ul { display: none }
+
+#contact, #contact .fx { float: left; width: 730px; background:url(images/contact_end.png) no-repeat 0 100%; padding-bottom: 25px }
+#contact { background: url(images/contact_rep.gif) repeat-y 0 0; position: relative; left: -24px; margin-top: 10px; line-height:18px; padding-bottom: 0 }
+#contact .b { height: auto; width: 345px; padding: 0 1px; background: url(images/contact_top.png) no-repeat 0 0; margin-right: 18px}
+#contact .b p, #contact .b h3, #contact .b a.ar { padding-left: 20px; float: left; width: 325px; display: inline }
+#contact .b h3 { font: 24px/120% "Helvetica Neue"; margin: 17px 0 9px}
+#contact .b a.ar { height: 35px; padding-top: 15px; text-transform: uppercase; color: #831127; background: url(images/contact_lnk.png) no-repeat 0 0 }
+#contact .b a.ar:hover, #contact .b a.ar.on { background-position: 0 100%; text-decoration: none }
+.b form.chk { display: none; float: left; padding: 13px 0 35px 13px; width: 332px; background:url(images/contact_fm.gif) repeat-x 0 100%; margin: 0 0 10px }
+.b .gform_wrapper form.chk { display: block }
+.b .gform_wrapper { float: left; width: 100%; display: none }
+.b form.chk label { display: block; margin: 4px 0 6px 8px; line-height:16px }
+.b form.chk textarea { padding: 8px 6px; margin: 10px 0; width: 298px }
+.b form.chk textarea, .b form.chk input, .b form.chk select { font-size: 13px; font-family: Arial, Helvetica, sans-serif }
+.b form.chk .err { border-color: #f00 }
+
+.b.get#hac { position: absolute; right: 1px; bottom: 337px; z-index:11; width: 337px; padding: 0; margin: 0; background: url(images/bl_grep.gif) repeat-y 0 0 }
+.b.get#hac h3 { margin: 0; padding: 17px 27px 16px; width: 269px; background: url(images/bl_gtop.png) no-repeat 0 0; position: absolute; left:7px; top: -9px }
+.b#hac .fx { float: left; background: url(images/bl_gend.png) no-repeat 0 100%; width: 323px; padding: 52px 7px 0 }
+.b#hac form.chk { padding: 0 0 15px 5px; margin: 0; width: 318px; background: none }
+.b#hac div.jq { float: left; position: relative; margin:5px 0 0 }
+.b#hac div.jq label { position: absolute; top: 3px; left: 4px; margin: 0 }
+.b#hac form.chk textarea { margin: 5px 0 }
+.b.get#hac a.ar, .b#hac form.chk { border-top: 1px solid #fff; border-bottom: 1px solid #dfc460}
+.b.get#hac a.ar.on { background-image: url(images/ard.png) }
+.hal, .hal .e { float: left; width: 317px; height: 2px; background: url(images/hal.png) no-repeat 0 0 }
+.hal .n { float: left; width: 269px; padding: 2px 24px 3px; background: url(images/halm.png) repeat-y 0 0 }
+.hal { margin: 3px; padding: 4px 0 0; height: auto; background-position: 0 -2px; font: 13px/128% "Helvetica Neue" }
+.hal strong { font-weight: normal; color: #5F020A }
+#newshere img { width: 252px }
+
+div#rt { float: left; margin-left: 38px; width: 224px }
+div#rt .b.get.c, #arc { width: 224px; height: auto; background: none; margin: 0; padding: 0 }
+#arc { background-color: #fcf9ee; width: 221px }
+#arc .m { float: left; width: 203px; background: #fcf9ee url(images/arc.png) no-repeat bottom left; padding: 10px 0 20px 17px; margin: 0 0 0 1px }
+#arc .m ul { margin: 0; padding: 0; list-style: none }
+#arc a { color: #333; text-decoration: none }
+div#rt .b.get h3, #arc h3 { float: left; width: 190px; font: 22px/28px "Helvetica Neue"; padding: 8px 17px 2px; margin: 0; background: url(images/block_lm.png) no-repeat 0 0 }
+div#rt .b.get a.ar, div#rt .b.get.c div { width: 207px; padding-left: 17px; background: url(images/block_lm.png) no-repeat 0 -44px; position: relative }
+div#rt .b.get.c div { background-position: 0 -97px; height: 41px }
+div#rt .b.get a.ar .demo { float: left; width: 55px; height:52px; position: relate; margin: -14px 0 0 -14px; background: url(images/demo.jpg) no-repeat 0 0 } 
+
+#dl { float: left; width: 207px; margin: 11px 0 0 1px; height: 69px; background: url(images/dl.png) no-repeat 0 0; padding: 13px 0 0 16px }
+#dl select { width: 191px; position: relative; left: 0; top: 3px; font: 12px/20px Arial, Helvetica, sans-serif }
+
+.nav { float: left; width: 100%; margin: 25px 0 0 }
+.nav a { color: #333; text-decoration: none }
+.nav .prev { float: left }
+.nav .next { float: right }
+
+#frap { float:left; width: 100%; background:url(images/ftr.png) no-repeat 50% 0; margin-top: 24px }
+#ftr { display: block; width: 952px; height: 240px; margin: 0 auto; text-align: left; padding: 11px 0 0 26px }
+#ftr a { color: #333; text-decoration: none }
+#ftr .mo { float: left; width: 217px; height: 24px; font-family: Rockwell }
+#ftr ul { float: left; margin: 2px 0 0; padding: 0; width: 500px; list-style: none; position:relative; line-height:16px }
+#ftr ul li { float: left; padding: 0 }
+#ftr ul li.menu-item-409 { float: right; margin-right: 5px }
+#ftr ul li a.first { margin: 0 41px; font-family:"Helvetica Neue" }
+#ftr ul li.ind a.first { margin: 0 46px 0 26px }
+#ftr ul li.prod { border-left: 1px solid #ccc; border-right: 1px solid #ccc }
+#ftr ul li ul { display: none }
+#ftr ul li.on ul { display: block; padding: 30px 0 0 28px; width: 476px; font-size: 12px; line-height: 20px; position: absolute; top: 15px; left: 0; background: url(images/dar.png) no-repeat 71px 13px; margin: 0 }
+#ftr ul li.on.prod ul { background-position: 237px 13px }
+#ftr ul li.on ul li { padding: 0; width: 157px }
+#ftr ul li.on ul ul.sub-menu, #searchform label, #ftr ul li a span.ar { display: none }
+
+#ftr #searchform { float: left }
+#ftr #searchsubmit { width: 67px; height: 23px; background: url(images/search.png) no-repeat 0 0; border: none; padding: 0; margin: 0; text-align: center; font: bold 12px/15px Verdana, Geneva, sans-serif; color: #fff; text-transform:lowercase; cursor: pointer }
+#ftr .br { float: left; width: 952px; height: 46px }
+#ftr .num { float: left; display: inline; width: 217px; margin: 0; padding: 5px 0 0; font: 12px/15px "Helvetica Neue"; height: 80px; border-right: 1px solid #ccc }
+#ftr .num div { float: left; width: 217px; margin-bottom: 10px }
+#ftr .num em { float: left; display: inline; margin-right: 7px; width: 73px; font-style: normal; font-size: 13px; color: #666; border-right: 1px solid #ccc }
+
+#ftr .so { float: right; display: inline; width: 214px; padding: 3px 0 0 19px; border-left: 1px solid #ccc; height: 82px; margin:0 }
+#ftr .so ul { width: 213px; margin-top:12px }
+.so ul li a { float: left; margin-right: 9px; width: 23px; height: 22px; text-indent:-999em; background: url(images/social.jpg) no-repeat 0 0 }
+.so ul li a.f { background-position: -23px 0 }
+.so ul li a.l { background-position: -46px 0 }
+.so ul li a.a { background-position: -69px 0 }
+.so ul li a.r { background-position: -92px 0 }
+#ftr .e { float: left; width: 936px; font-size: 11px; margin-top: 40px}
+#ftr .e .l { float: left }
+#ftr .e .r { float: right }
+
+div.hr { display:block; width: 100%; border-top: 1px solid #ccc; height: 5px; margin: 0 0 6px }
+
+#comments { float: left }
+#commentform input, #commentform textarea { display: block }
+
+*:focus { outline: none }
+
+/* direct page(s) */
+body.dir { background: url(images/lbg.jpg) no-repeat 50% 0; }
+.dir #hdr { background: none }
+.dir #content { padding-left: 18px }
+.dir #frap { background: none; border-top: 3px solid #60030a }
+#dleft { float: left; width: 635px; margin-right: 6px }
+#dleft ul { position: relative; left: -2em }
+#dright { float: left; width: 312px }
+.dir #top { padding: 0; height: 407px }
+.dir h1 { font: 42px/44px "ArialRoundedMTBold"; margin: 16px 0 5px }
+.dir #top h2 { font-size: 19px; line-height: 24px }
+.dir #top.typeface-js p { font: bold 15px/21px Arial, Helvetica, sans-serif }
+.dir #ftr .e { margin-top: 0 }
+.dir h2 { font: 24px/28px "Helvetica Neue" }
+.dar, .dtar { display: block; font: 34px/41px "ArialRoundedMTBold"; padding: 15px 0; color: #fff; text-shadow: 2px 2px 2px rgba(0,0,0,0.4); text-transform:uppercase; margin: 0 0 43px }
+.dar, .rest { float: left; width: 635px }
+.dtar { width: 150px; margin: -90px auto 0; padding: 0; height: 110px; text-shadow: none; color: #831127; text-transform: none; font-size: 26px; line-height:120%; text-align: center }
+#dright table, #dright .gform_wrapper .chk .gform_body { width: 270px; margin-left: 21px }
+#dright textarea { margin: 9px 0 0 21px }
+.dir label { font-size: 12px; font-weight: bold; line-height: 12px; display: block; margin: 8px 0 6px }
+.dir input.text { width: 123px }
+.dir input.text.zip { width: 50px }
+.dir .chk { margin-bottom: 29px }
+.dblk { float: left; width: 308px; margin-top: 16px; border: 1px solid #ccc; padding-bottom: 17px  }
+.dblk a { color: #333; text-decoration: none }
+.dblk h3 { float: left; width: 308px; height: 40px; background: url(images/dblkh3.png) repeat-x 0 0 }
+.dblk .spacer { float: left; margin: 8px 24px 0 }
+.dblk .inside { float: left; width: 260px; margin: 15px 24px 0; font-size: 16px; line-height: 22px }
+.dir .so ul, .dir .so ul li { float: left; margin: 0; padding: 0; list-style: none }
+
+.dsub, .gform_wrapper .chk .gform_footer input.button.gform_button { border: none; width: 256px; height: 67px; font-size: 30px; font-family: Arial, Helvetica, sans-serif; color: #fff; font-weight: bold; cursor: pointer; background: url(images/direct_sub.png) no-repeat 0 0; text-shadow: 1px 1px 1px rgba(0,0,0,0.65) }
+
+#dright .gform_wrapper { margin: 0 }
+#dright .gform_wrapper textarea.small { margin: 0; height: 65px }
+#dright .gform_wrapper .gform_footer { margin: 17px 24px; padding: 0 }

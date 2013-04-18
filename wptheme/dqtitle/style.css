@@ -1,0 +1,49 @@
+/*
+Theme Name: DQTitle
+Theme URI: http://www.dataquicktitle.com/
+Description: Child Theme of main DataQuick.com WordPress theme, for the DQ Title microsite
+Author: Ninthlink, Inc.
+Author URI: http://www.ninthlink.com
+Template: dq
+Version: 1.0
+*/
+
+@import '../dq/style.css';
+
+/* more style here */
+#dq { width: 197px; height: 62px; background: url(images/dqtitle.png) no-repeat 0 0 }
+
+body.cus { background-image: url(images/bg_notab.png) }
+body.cus.title { background-image: url(images/bg_title.png) }
+body.cus.closings { background-image: url(images/bg_closings.png) }
+body.cus.other { background-image: url(images/bg_other.png) }
+body.home { background-image: url(images/bg_home.jpg) }
+#home h1, #top { color: #831126 }
+h1, #home h1 { font: 42px/53px Arial, Helvetica, sans-serif; margin: 19px 0 1px }
+#home h1 { margin: 28px 0 31px; }
+#home h2, body.cus #top h2 { font: 15px/19px Georgia, "Times New Roman", Times, serif; color: #333; letter-spacing: 0.02em }
+
+/* nav */
+#drp { border: none }
+#drp .t, #drp .e { display: none; background: none }
+#ipc { margin-left: 134px }
+#ipc li.title { width: 117px }
+#ipc li.closings { margin-right:27px; width: 109px; text-align: center; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf }
+body.cus #ipc li.current-menu-item a { color:#000; font-weight: bold }
+#ipc li.on a { color: #000 !important }
+/*
+body.ind #ipc li.page-item-19 { border-left: none }
+body.pro #ipc li.page-item-19 { border: none; margin-right: 35px }
+*/
+
+div#rt .b.get a.ar.last { height:23px }
+div#rt .b.get.c div { background-position: 0 100%; height: 16px; padding-top: 0 }
+
+#frap { background-image:url(images/ftr.png) }
+#ftr ul#fnav { width: 700px; font-size: 12px }
+#ftr ul#fnav li { float: left; padding: 0 11px; margin:0; border-left: 1px solid #000 }
+#ftr ul#fnav li.first { padding-left: 0; border-left: none }
+#ftr ul#fnav a { font-family: Arial, Helvetica, sans-serif; float: left }
+#ftr #searchform { float: right }
+#ftr .e { margin-top: 0; width: 100% }
+#ftr .so { height: auto; padding: 0; border: none }
