@@ -17,7 +17,7 @@ $title_policy[4] = (empty($entry['112.3'])) ? null : $entry['32'];
 
 $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 '<REQUEST_GROUP MISMOVersionID="2.3">'.
-	'<XXXREQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
+	'<REQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '">'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . $entry['8'] . '" />'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Fax" _Value="' . $entry['9'] . '" />'.
@@ -64,7 +64,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . $entry['98'] . '" />'.
 				'</BORROWER>'.
 				'<LOAN_PURPOSE />'.
-				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . $entry['29'] . '" LenderCaseIdentifier="4539687351173956" MortgageType="' . $entry['28'] . '" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
+				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . $entry['29'] . '" LenderCaseIdentifier="' . $entry['00000'] . '" MortgageType="' . $entry['28'] . '" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
 				'<PROPERTY _StreetAddress="' . $entry['45'] . '" _City="' . $entry['47'] . '" _State="' . $entry['49'] . '" _County="' . $entry['48'] . '" _PostalCode="' . $entry['50'] . '" StructureBuiltYear="" EstimatedValueAmount="' . $entry['30'] . '">'.
 					'<_LEGAL_DESCRIPTION _TextDescription="" />'.
 				'</PROPERTY>'.
