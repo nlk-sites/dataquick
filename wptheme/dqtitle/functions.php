@@ -235,10 +235,10 @@ add_action("gform_post_submission", "set_post_content", 10, 2);
 function set_post_content( $entry, $form ) {
     // Gravity Forms has validated the data
     $message = null;
-    /* Testing and debugging...
-    * $message = print_r($entry, true);
-    * $message = wordwrap($message, 70);
-    */
+    /* Testing and debugging... */
+    $message = print_r($entry, true);
+    $message = wordwrap($message, 70);
+    /**/
 
     // Custom Form action
     if($form['id'] == 1) {
@@ -261,12 +261,14 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($ch);
+        $httpResult = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
+        $resultant = '==> ' . $httpResult . ' | ' . $output . '<br />';
     endif;
     // end curl
 
     // Send email for debugging purposes
-    mail('tim@ninthlink.com', 'Getting the Gravity Form Field IDs', $message);
+    mail('tim@ninthlink.com', 'Getting the Gravity Form Field IDs', "$resultant $message");
 }
 
 // Delete any posts to database so information is not stored
