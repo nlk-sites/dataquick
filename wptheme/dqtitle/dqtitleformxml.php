@@ -15,7 +15,7 @@ $title_policy[2] = (empty($entry['112.2'])) ? 'false' : 'true';
 $title_policy[3] = (empty($entry['112.3'])) ? 'false' : 'true';
 $title_policy[4] = (empty($entry['112.3'])) ? null : $entry['32'];
 
-$xml = '<?xml version="1.0" encoding="utf-8"?>'.
+$xml = '<?xmlt version="1.0" encoding="utf-8"?>'.
 '<REQUEST_GROUP MISMOVersionID="2.3">'.
 	'<REQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '">'.
