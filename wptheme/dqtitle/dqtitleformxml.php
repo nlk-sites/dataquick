@@ -70,7 +70,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 	'<REQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '">'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['8']) . '" />'.
-			'<CONTACT_POINT _RoleType="Work" _Type="Fax" _Value="' . $entry['9'] . '" />'.
+			'<CONTACT_POINT _RoleType="Work" _Type="Fax" _Value="' . format_phone_us($entry['9']) . '" />'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Email" _Value="' . $entry['7'] . '" />'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['8']) . '" />'.
 		'</CONTACT_DETAIL>'.
@@ -93,8 +93,8 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Lendor Phone:' . format_phone_us($entry['14']) . ';'.
 					'AU #:' . $entry['4'] . ';'. // NotProvided;
 					'Property Owner:' . $entry['21'] . ';'.
-					'Property Owner ' . $entry['23'] . ':' . $entry['22'] . ';'.
-					'Property Owner ' . $entry['25'] . ':' . $entry['24'] . ';'.
+					'Property Owner ' . $entry['23'] . ':' . format_phone_us($entry['22']) . ';'.
+					'Property Owner ' . $entry['25'] . ':' . format_phone_us($entry['24']) . ';'.
 					'Title Policy to be issued Other:' . $title_policy[3] . $title_policy[4] . ';'.
 					'Title Policy to be issued Owner:' . $title_policy[1] . ';'.
 					'Title Policy to be issued Lender:' . $title_policy[2] . ';'.
