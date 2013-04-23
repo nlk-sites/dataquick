@@ -254,11 +254,11 @@ function set_post_content( $entry, $form ) {
     if ( isset($sendto) ):
         $ch = curl_init($sendto);
         curl_setopt($ch, CURLOPT_MUTE, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, urlencode($xml));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         $output = curl_exec($ch);
