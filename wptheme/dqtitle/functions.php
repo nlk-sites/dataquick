@@ -261,14 +261,14 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($ch);
-        $httpResult = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $result = curl_getinfo($ch);
         curl_close($ch);
-        $resultant = '==> ' . $httpResult . ' | ' . $output . '<br />';
+        $resultant = '==> ' . $result . ' | ' . $output . "\n\r";
     endif;
     // end curl
 
     // Send email for debugging purposes
-    mail('tim@ninthlink.com', 'Getting the Gravity Form Field IDs', "$resultant $message");
+    mail('tim@ninthlink.com', 'DQTitle Place Order debugging email', "$resultant $message");
 }
 
 // Delete any posts to database so information is not stored
