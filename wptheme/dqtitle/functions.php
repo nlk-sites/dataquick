@@ -260,6 +260,7 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
         curl_setopt($ch, CURLOPT_POSTFIELDS, "$xml");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         $output = curl_exec($ch);
         $result = print_r(curl_getinfo($ch), true);
         curl_close($ch);
