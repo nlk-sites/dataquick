@@ -254,6 +254,7 @@ function set_post_content( $entry, $form ) {
     // $sendto = "https://webservices.rels.info/gofer/receiver.aspx";
     if ( isset($sendto) ):
         $ch = curl_init($sendto);
+        $fp = fopen("xml_file.txt", "w");
         curl_setopt($ch, CURLOPT_MUTE, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
@@ -265,7 +266,9 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         $output = curl_exec($ch);
         $result = print_r(curl_getinfo($ch), true);
+        fwrite($fp, $output);
         curl_close($ch);
+        fclose($fp);
         $resultant = '==> ' . $result . ' | ' . $output . "\n\r";
     endif;
     // end curl
