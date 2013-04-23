@@ -30,7 +30,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 		'<PREFERRED_RESPONSE _Destination="' . $entry['7'] . '" />'.
 	'</SUBMITTING_PARTY>'.
 	'<REQUEST RequestDatetime="' . date('n/d/Y g:i:s A', strtotime($entry['date_created'])) . '">'. // 4/15/2013 7:29:42 PM
-		'<KEY _Name="OrderNumber" _Value="' . 'RTW' . ( 10000000 + $entry['id'] ) . '" />'. // RTW10000531
+		'<KEY _Name="OrderNumber" _Value="' . 'RTW' . ( 20000000 + $entry['id'] ) . '" />'. // RTW10000531
 		'<KEY _Name="OrderRecordID" _Value="' . $entry['00000'] . '" />'. //
 		'<KEY _Name="VendorID" _Value="99999" />'. // '99999'
 		'<KEY _Name="ORSTransactionID" _Value="" />'.
