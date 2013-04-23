@@ -75,7 +75,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['8']) . '" />'.
 		'</CONTACT_DETAIL>'.
 	'</REQUESTING_PARTY>'.
-	'<SUBMITTING_PARTY _Name="' . $entry['3'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
+	'<SUBMITTING_PARTY _Name="' . $entry['3'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '" LoginAccountIdentifier="gofer" LoginAccountPassword="f8stg0f3r" >'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '" />'.
 		'<PREFERRED_RESPONSE _Destination="' . $entry['7'] . '" />'.
 	'</SUBMITTING_PARTY>'.
