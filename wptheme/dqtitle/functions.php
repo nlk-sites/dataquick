@@ -246,7 +246,8 @@ function set_post_content( $entry, $form ) {
         $message .= $xml;
     }
     // start curl
-
+    $username = 'gofer';
+    $password = 'f8stg0f3r';
     // Test site...
     $sendto = "https://test.webservices.rels.info/gofer/receiver.aspx";
     // Production site...
@@ -257,6 +258,7 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
         //curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
         curl_setopt($ch, CURLOPT_POSTFIELDS, urlencode($xml));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
