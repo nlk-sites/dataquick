@@ -1,4 +1,6 @@
 <?php
+
+
 // selected state / office
 $selected_state = $entry['1'];
 $selected_office = null;
@@ -8,12 +10,14 @@ foreach($offices_array as $v) {
 		$selected_office = $entry[$v];
 	}
 }
+$selected_state_office = $selected_state . ' ' . $selected_office;
+
 // title policy check boxes
 $title_policy = array();
 $title_policy[1] = (empty($entry['112.1'])) ? 'false' : 'true';
 $title_policy[2] = (empty($entry['112.2'])) ? 'false' : 'true';
-$title_policy[3] = (empty($entry['112.3'])) ? 'false' : 'true';
-$title_policy[4] = (empty($entry['112.3'])) ? null : $entry['32'];
+$title_policy[3] = (empty($entry['112.3'])) ? 'false' : 'true - ' . $entry['32'];
+
 // format phone numbers
 function format_phone_us($phone = '', $convert = true, $trim = true)
 {
@@ -63,14 +67,174 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 			return $originalPhone;
 	}
 }
-// assign default values for marital status
+// convert weird dollars to valid string
+function validate_number($number)
+{
+	$number = preg_replace('/[^0-9\.]/', '', $number);
+	number_format($number, 0, '', '');
+	return $number;
+}
+// assign default values of unknown if blank
+function validate_it($value)
+{
+	$default = "Unknown";
+	if (empty($value)) { 
+		return $default; 
+	}
+	else {
+		return $value;
+	}
+}
+function clean_it($string)
+{
+	$string = str_replace(' & ', ' and ', $string);
+}
 if (empty($entry['99'])) { $mstatusa = "Unknown"; }
 if (empty($entry['104'])) { $mstatusb = "Unknown"; }
+
+
+$curdatetime = new DateTime( date( 'n/d/Y g:i:s A', time() ), new DateTimeZone('America/New_York') );
+$username = "gofer";
+$password = "f8stg0f3r";
+// array to parse and clean data
+$x = array();
+$x['requesting_party'] = [
+		'name' => $entry['2'],
+		'streetaddress' => $entry['40'],
+		'streetaddress2' => $entry['41'],
+		'city' => $entry['42'],
+		'state' => $entry['43'],
+		'postalcode' => $entry['44'],
+		'contact_detail' => [
+			'name' => $entry['2'],
+			'contact_point' => [
+				'work_phone' => format_phone_us($entry['8']),
+				'work_fax' => format_phone_us($entry['9']),
+				'work_email' => $entry['7']
+				]
+			]
+		];
+$x['submitting_party'] = [
+		'name' => $entry['3'],
+		'streetaddress' => $entry['40'],
+		'streetaddress2' => $entry['41'],
+		'city' => $entry['42'],
+		'state' => $entry['43'],
+		'postalcode' => $entry['44'],
+		'username' => $username,
+		'password' => $password,
+		'identifier' => "DQ_TW",
+		'contact_detail' => [
+			'name' => $entry['2']
+			],
+		'preferred_response' => [
+			'destination' => $entry['7']
+			]
+		];
+$x['request'] = [
+		'requestdatetime' => date( 'n/d/Y g:i:s A', strtotime($entry['date_created']) ),
+		'key' => [
+			'ordernumber' => ( 'RTW' . ( 20000000 + $entry['id'] ) ),
+			'orderrecordid' => "",
+			'vendorid' => "99999",
+			'orstransactionid' => ""
+			],
+		'request_data' => [
+			'title_request' => [
+				'actiontype' => "Original",
+				'comment' => [
+					'office_selected' => $selected_state_office,
+					'additional_comments' => $entry['16'],
+					'requestor_company' => $entry['3'],
+					'lendor_name' => $entry['12'],
+					'lendor_phone' => format_phone_us($entry['14']),
+					'au_number' => $entry['4'],
+					'property_owner_1' => $entry['21'],
+					'property_owner_2' => $entry['23'] . ':' . format_phone_us($entry['22']),
+					'property_owner_3' => $entry['25'] . ':' . format_phone_us($entry['24']),
+					'title_policy_other' => ( (empty($entry['112.3'])) ? 'false' : 'true - ' . $entry['32'] ),
+					'title_policy_owner' => ( (empty($entry['112.1'])) ? 'false' : 'true' ),
+					'title_policy_lender' => ( (empty($entry['112.2'])) ? 'false' : 'true' ),
+					'closing_services_req' => $entry['33.1'],
+					'dataquick_title_to_close' => $entry['114.1'],
+					'project_closing_date' => date('m/d/Y', strtotime($entry['36'])),
+					'tax_parcel_number' => $entry['37'],
+					'second_home_address' => $entry['123'],
+					'second_home_address2' . $entry['122'],
+					'second_home_city' => $entry['121'],
+					'second_home_county' => $entry['124'],
+					'second_home_state' => $entry['120'],
+					'second_home_zip' => $entry['119']
+					],
+				'borrower' => [
+					'sequenceidentifier' => null,
+					'firstname' => $entry['91'],
+					'lastname' => $entry['92'],
+					'ssn' => null,
+					'maritalstatustype' => validate_it($entry['99']),
+					'residence' => [
+						'streetaddress' => $entry['93'],
+						'city' => $entry['95'],
+						'state' => $entry['96'],
+						'postalcode' => $entry['97']
+						],
+					'contact_point' => [
+						'home_phone' => null,
+						'work_phone' => format_phone_us($entry['98'])
+						]
+					],
+				'loan_purpose' => "",
+				'mortgage_terms' => [
+					'borrowerrequestedloanamount' => $entry['29'],
+					'lendercaseidentifier' => 'LOAN' . ( 20000000 + $entry['id'] ),
+					'mortgagetype' => $entry['28'],
+					'loanestimatedclosingdate' => date( 'm/d/Y', strtotime( $entry['36'] ) )
+					],
+				'property' => [
+					'streetaddress' => $entry['45'],
+					'city' => $entry['47'],
+					'state' => $entry['49'],
+					'county' => $entry['48'],
+					'postalcode' => $entry['50'],
+					'structurebuiltyear' => "",
+					'estimatedvalueamount' => $entry['30'],
+					'legal_description' => [
+						'textdescription' => ""
+						]
+					],
+				'product' => [
+					'name' => [
+						'description' => $entry['34']
+						]
+					],
+				'seller' => [
+					'firstname' => $entry['101'],
+					'streetaddress' => $entry['103'],
+					'streetaddress2' => $entry['108'],
+					'city' => $entry['110'],
+					'state' => $entry['107'],
+					'postalcode' => $entry['106'],
+					'maritalstatustype' => validate_it($entry['104']),
+					'contact_detail' => [
+						'contact_point' => [
+							'work_phone' => format_phone_us($entry['105'])
+							]
+						]
+					]
+				]
+			]
+		];
 
 // build xml
 $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 '<REQUEST_GROUP MISMOVersionID="2.3">'.
-	'<REQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
+	'<REQUESTING_PARTY _Name="' . $entry['2'] . 
+			'" _StreetAddress="' . $entry['40'] . 
+			'" _StreetAddress2="' . $entry['41'] . 
+			'" _City="' . $entry['42'] . 
+			'" _State="' . $entry['43'] . 
+			'" _PostalCode="' . $entry['44'] . 
+			'">'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '">'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['8']) . '" />'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Fax" _Value="' . format_phone_us($entry['9']) . '" />'.
@@ -104,7 +268,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Property Owner:' . $entry['21'] . ';'.
 					'Property Owner ' . $entry['23'] . ':' . format_phone_us($entry['22']) . ';'.
 					'Property Owner ' . $entry['25'] . ':' . format_phone_us($entry['24']) . ';'.
-					'Title Policy to be issued Other:' . $title_policy[3] . $title_policy[4] . ';'.
+					'Title Policy to be issued Other:' . $title_policy[3] . ';'.
 					'Title Policy to be issued Owner:' . $title_policy[1] . ';'.
 					'Title Policy to be issued Lender:' . $title_policy[2] . ';'.
 					'Closing Services Req:' . $entry['33.1'] . ';'.
@@ -128,7 +292,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['98']) . '" />'.
 				'</BORROWER>'.
 				'<LOAN_PURPOSE />'.
-				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . $entry['29'] . 
+				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . validate_number($entry['29']) . 
 						'" LenderCaseIdentifier="' . 'LOAN' . ( 20000000 + $entry['id'] ) . 
 						'" MortgageType="' . $entry['28'] . 
 						'" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
@@ -137,7 +301,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 						'" _State="' . $entry['49'] . 
 						'" _County="' . $entry['48'] . 
 						'" _PostalCode="' . $entry['50'] . 
-						'" StructureBuiltYear="" EstimatedValueAmount="' . $entry['30'] . '">'.
+						'" StructureBuiltYear="" EstimatedValueAmount="' . validate_number($entry['30']) . '">'.
 					'<_LEGAL_DESCRIPTION _TextDescription="" />'.
 				'</PROPERTY>'.
 				'<_PRODUCT>'.
