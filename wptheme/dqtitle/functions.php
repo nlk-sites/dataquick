@@ -311,6 +311,8 @@ function populate_html($form)
     //this is a 2-page form with the data from page one being displayed in an html field on page 2
     $current_page = GFFormDisplay::get_current_page($form["id"]);
     $html_content = null;
+    $ss = null;
+    $so = null;
     if ($current_page == 3)
     {
         foreach($form["fields"] as &$field)
@@ -321,6 +323,7 @@ function populate_html($form)
             //get the label and then get the posted data for the field (this works for simple fields only - not the field groups like name and address)
                 $ss = rgpost('input_' . $field['id']);
             }
+            //select office
             if ($field["id"] >= 51 && $field["id"] <= 89 && $field["id"] != 85)
             {    
                 $so .= rgpost('input_' . $field['id']);
