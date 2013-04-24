@@ -71,7 +71,7 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 function validate_number($number)
 {
 	$number = preg_replace('/[^0-9\.]/', '', $number);
-	number_format($number, 0, '', '');
+	$number = number_format($number, 0, '', '');
 	return $number;
 }
 // assign default values of unknown if blank
@@ -93,7 +93,7 @@ if (empty($entry['99'])) { $mstatusa = "Unknown"; }
 if (empty($entry['104'])) { $mstatusb = "Unknown"; }
 
 
-$curdatetime = new DateTime( date( 'n/d/Y g:i:s A', time() ), new DateTimeZone('America/New_York') );
+//$curdatetime = new DateTime( date( 'n/d/Y g:i:s A', time() ), new DateTimeZone('America/New_York') );
 $username = "gofer";
 $password = "f8stg0f3r";
 // array to parse and clean data
