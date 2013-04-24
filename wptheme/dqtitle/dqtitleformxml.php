@@ -63,7 +63,8 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 			return $originalPhone;
 	}
 }
-
+if (empty($entry['99'])) { $mstatusa = "Unknown"; }
+if (empty($entry['104'])) { $mstatusb = "Unknown"; }
 
 $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 '<REQUEST_GROUP MISMOVersionID="2.3">'.
@@ -114,20 +115,39 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Second Home County:' . $entry['124'] . ';'.
 					'Second Home State:' . $entry['120'] . ';'.
 					'Second Home Zip:' . $entry['119'] . '">'.
-				'<BORROWER _SequenceIdentifier="" _FirstName="' . $entry['91'] . '" _LastName="' . $entry['92'] . '" _SSN="" MaritalStatusType="' . $entry['99'] . '">'.
-					'<_RESIDENCE _StreetAddress="' . $entry['93'] . '" _City="' . $entry['95'] . '" _State="' . $entry['96'] . '" _PostalCode="' . $entry['97'] . '" />'.
+				'<BORROWER _SequenceIdentifier="" _FirstName="' . $entry['91'] . 
+						'" _LastName="' . $entry['92'] . 
+						'" _SSN="" MaritalStatusType="' . $mstatusa . '">'.
+					'<_RESIDENCE _StreetAddress="' . $entry['93'] . 
+						'" _City="' . $entry['95'] . 
+						'" _State="' . $entry['96'] . 
+						'" _PostalCode="' . $entry['97'] . '" />'.
 					'<CONTACT_POINT _RoleType="Home" _Type="Phone" _Value="" />'.
 					'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['98']) . '" />'.
 				'</BORROWER>'.
 				'<LOAN_PURPOSE />'.
-				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . $entry['29'] . '" LenderCaseIdentifier="' . 'LOAN' . ( 20000000 + $entry['id'] ) . '" MortgageType="' . $entry['28'] . '" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
-				'<PROPERTY _StreetAddress="' . $entry['45'] . '" _City="' . $entry['47'] . '" _State="' . $entry['49'] . '" _County="' . $entry['48'] . '" _PostalCode="' . $entry['50'] . '" StructureBuiltYear="" EstimatedValueAmount="' . $entry['30'] . '">'.
+				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . $entry['29'] . 
+						'" LenderCaseIdentifier="' . 'LOAN' . ( 20000000 + $entry['id'] ) . 
+						'" MortgageType="' . $entry['28'] . 
+						'" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
+				'<PROPERTY _StreetAddress="' . $entry['45'] . 
+						'" _City="' . $entry['47'] . 
+						'" _State="' . $entry['49'] . 
+						'" _County="' . $entry['48'] . 
+						'" _PostalCode="' . $entry['50'] . 
+						'" StructureBuiltYear="" EstimatedValueAmount="' . $entry['30'] . '">'.
 					'<_LEGAL_DESCRIPTION _TextDescription="" />'.
 				'</PROPERTY>'.
 				'<_PRODUCT>'.
 					'<_NAME _Description="' . $entry['34'] . '" />'.
 				'</_PRODUCT>'.
-				'<SELLER _FirstName="' . $entry['101'] . '" _StreetAddress="' . $entry['103'] . '" _StreetAddress2="' . $entry['108'] . '" _City="' . $entry['110'] . '" _State="' . $entry['107'] . '" _PostalCode="' . $entry['106'] . '" MaritalStatusType="' . $entry['104'] . '">'.
+				'<SELLER _FirstName="' . $entry['101'] . 
+						'" _StreetAddress="' . $entry['103'] . 
+						'" _StreetAddress2="' . $entry['108'] . 
+						'" _City="' . $entry['110'] . 
+						'" _State="' . $entry['107'] . 
+						'" _PostalCode="' . $entry['106'] . 
+						'" MaritalStatusType="' . $mstatusb . '">'.
 					'<CONTACT_DETAIL>'.
 						'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['105']) . '" />'.
 					'</CONTACT_DETAIL>'.
