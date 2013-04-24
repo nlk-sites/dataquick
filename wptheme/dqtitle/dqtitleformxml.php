@@ -13,9 +13,9 @@ foreach($offices_array as $v) {
 $selected_state_office = $selected_state . ' ' . $selected_office;
 
 // clean the array of not-allowed characters
-foreach ($entry as &$v) {
-    $v = $v;
-}
+//foreach ($entry as &$v) {
+//    $v = $v;
+//}
 
 
 // title policy check boxes
