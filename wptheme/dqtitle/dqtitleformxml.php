@@ -63,12 +63,19 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 			return $originalPhone;
 	}
 }
+// assign default values for marital status
 if (empty($entry['99'])) { $mstatusa = "Unknown"; }
 if (empty($entry['104'])) { $mstatusb = "Unknown"; }
 
+// build xml
 $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 '<REQUEST_GROUP MISMOVersionID="2.3">'.
-	'<REQUESTING_PARTY _Name="' . $entry['2'] . '" _StreetAddress="' . $entry['40'] . '" _StreetAddress2="' . $entry['41'] . '" _City="' . $entry['42'] . '" _State="' . $entry['43'] . '" _PostalCode="' . $entry['44'] . '">'.
+	'<REQUESTING_PARTY _Name="' . $entry['2'] . 
+			'" _StreetAddress="' . $entry['40'] . 
+			'" _StreetAddress2="' . $entry['41'] . 
+			'" _City="' . $entry['42'] . 
+			'" _State="' . $entry['43'] . 
+			'" _PostalCode="' . $entry['44'] . '">'.
 		'<CONTACT_DETAIL _Name="' . $entry['2'] . '">'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['8']) . '" />'.
 			'<CONTACT_POINT _RoleType="Work" _Type="Fax" _Value="' . format_phone_us($entry['9']) . '" />'.
@@ -89,7 +96,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 	'<REQUEST RequestDatetime="' . date('n/d/Y g:i:s A', strtotime($entry['date_created'])) . '">'. // 4/15/2013 7:29:42 PM
 		'<KEY _Name="OrderNumber" _Value="' . 'RTW' . ( 20000000 + $entry['id'] ) . '" />'. // RTW10000531
 		'<KEY _Name="OrderRecordID" _Value="" />'. //
-		'<KEY _Name="VendorID" _Value="99999" />'. // '99999'
+		'<KEY _Name="VendorID" _Value="" />'. // '99999'
 		'<KEY _Name="ORSTransactionID" _Value="" />'.
 		'<REQUEST_DATA>'.
 			'<TITLE_REQUEST _ActionType="Original" _Comment="'.
