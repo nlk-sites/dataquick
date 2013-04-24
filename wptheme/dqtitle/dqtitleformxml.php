@@ -12,6 +12,12 @@ foreach($offices_array as $v) {
 }
 $selected_state_office = $selected_state . ' ' . $selected_office;
 
+// clean the array of not-allowed characters
+foreach ($entry as &$v) {
+    $v = $v;
+}
+
+
 // title policy check boxes
 $title_policy = array();
 $title_policy[1] = (empty($entry['112.1'])) ? 'false' : 'true';
@@ -70,7 +76,7 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 // convert weird dollars to valid string
 function validate_number($number)
 {
-	$number = preg_replace('/[^A-Za-z\$]/', '', $number);
+	$number = preg_replace('/[A-Za-z\$]/', '', $number);
 	$number = number_format($number, 0, '', '');
 	return $number;
 }
@@ -88,6 +94,18 @@ function validate_it($value)
 function clean_it($string)
 {
 	$string = str_replace(' & ', ' and ', $string);
+}
+function bool_it($string, $tad = null, $fad = null, $tf = true)
+{
+	$t = ($tf == true) ? 'true' : 'yes';
+	$f = ($tf == true) ? 'false' : 'no';
+	$t .= $tad;
+	$f .= $fad;
+	if (empty($string) || !$string) {
+		return $f;
+	} else {
+		return $t;
+	}
 }
 if (empty($entry['99'])) { $mstatusa = "Unknown"; }
 if (empty($entry['104'])) { $mstatusb = "Unknown"; }
@@ -270,11 +288,11 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Property Owner:' . $entry['21'] . ';'.
 					'Property Owner ' . $entry['23'] . ':' . format_phone_us($entry['22']) . ';'.
 					'Property Owner ' . $entry['25'] . ':' . format_phone_us($entry['24']) . ';'.
-					'Title Policy to be issued Other:' . $title_policy[3] . ';'.
-					'Title Policy to be issued Owner:' . $title_policy[1] . ';'.
-					'Title Policy to be issued Lender:' . $title_policy[2] . ';'.
-					'Closing Services Req:' . $entry['33.1'] . ';'.
-					'DataQuick Title to Close:' . $entry['114.1'] . ';'.
+					'Title Policy to be issued Other:' . bool_it($entry['112.3'], " - $entry['32']", null, true) . ';'.
+					'Title Policy to be issued Owner:' . bool_it($entry['112.1']) . ';'.
+					'Title Policy to be issued Lender:' . bool_it($entry['112.2']) . ';'.
+					'Closing Services Req:' . bool_it($entry['33.1']) . ';'.
+					'DataQuick Title to Close:' . bool_it($entry['114.1'], null, null, false) . ';'.
 					'Project Closing Date:' . date('m/d/Y', strtotime($entry['36'])) . ';'. // 04/30/2013
 					'Tax Parcel Number:' . $entry['37'] . ';'.
 					'Second Home Address:' . $entry['123'] . ';'.
