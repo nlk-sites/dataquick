@@ -274,7 +274,7 @@ function set_post_content( $entry, $form ) {
     // end curl
 
     // Send email for debugging purposes
-    mail('tim@ninthlink.com', 'DQTitle Place Order debugging email', "$resultant $message");
+    mail($entry['7'], 'DQTitle Place Order debug (RTW' . ( 20000000 + $entry['id'] ) . ')', "$resultant $message");
 }
 
 // Delete any posts to database so information is not stored
