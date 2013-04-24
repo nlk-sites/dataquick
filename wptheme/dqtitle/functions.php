@@ -251,7 +251,7 @@ function set_post_content( $entry, $form ) {
     $username = 'gofer';
     $password = 'f8stg0f3r';
 
-    /* * * * * * CHANGE $sendto FOR LIVE * * * * * */
+    /* * * * * * CHANGE $sendto FOR PRODUCTION * * * * * */
     // Test site...
     $sendto = "https://test.webservices.rels.info/gofer/receiver.aspx";
     // Production site...
@@ -275,11 +275,11 @@ function set_post_content( $entry, $form ) {
         //fwrite($fp, $output);
         curl_close($ch);
         //fclose($fp);
-        $resultant = 'cURL Result: ' . $result . "\n\r" . 'Gofer Response: ' . $output . "\n\r" . 'Submitted XML: ' . $xml;
+        $resultant = 'cURL Result: ' . $result . "\n\r\n\r" . 'Gofer Response: ' . $output . "\n\r\n\r" . 'Submitted XML: ' . $xml;
     endif;
     // end curl
 
-    // Send email for debugging purposes
+    // Send email for debugging purposes -> COMMENT OUT FOR PRODUCTION
     mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 20000000 + $entry['id'] ) . ')', $resultant);
 }
 
