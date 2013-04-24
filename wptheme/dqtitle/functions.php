@@ -332,7 +332,7 @@ function populate_html($form)
         require('office_info_array.php');
         $html_content = '<ul class="gform_fields left_label description_below"><!-- Office Info --><li class="gfield gsection fieldset-top"><h2 class="gsection_title">Selected Office</h2></li>';
         //address section
-        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Address</label><div class="ginput_container">';
+        $html_content .= '<li class="gfield fieldset"><label class="gfield_label" style="min-height:60px;">Office Address</label><div class="ginput_container" style="min-height:60px;">';
         $html_content .= $o_array[$ss][$so]['address'] . "<br />" . $o_array[$ss][$so]['address2'] . "<br />" . $o_array[$ss][$so]['city'] . ", " . $o_array[$ss][$so]['state'] . " " . $o_array[$ss][$so]['zip'];
         $html_content .= '</div></li>';
         //phone and fax sections
