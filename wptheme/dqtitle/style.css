@@ -358,3 +358,8 @@ li.gfield_error input, li.gfield_error select {
 div#gforms_confirmation_message {
 	padding-top: 100px;
 }
+
+/*contact us*/
+.contact.typeface-js {
+	padding-right: 60px;
+}
