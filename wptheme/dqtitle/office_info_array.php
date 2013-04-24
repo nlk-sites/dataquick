@@ -90,7 +90,7 @@ $o_array = array(
 			'address2' => '#220',
 			'city' => 'Destin',
 			'state' => 'FL',
-			'zip' => '32541'
+			'zip' => '32541',
 			'phone' => '(850) 650-3130',
 			'fax' => '(850) 650-3476',
 			'email' => 'FL-Destin@dataquick.com',
@@ -668,6 +668,4 @@ $o_array = array(
 			),
 		),
 	);
-
-
 ?>
