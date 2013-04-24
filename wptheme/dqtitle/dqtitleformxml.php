@@ -70,7 +70,7 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 // convert weird dollars to valid string
 function validate_number($number)
 {
-	$number = preg_replace('/[^0-9\.]/', '', $number);
+	$number = preg_replace('/[^A-Za-z\$]/', '', $number);
 	$number = number_format($number, 0, '', '');
 	return $number;
 }
