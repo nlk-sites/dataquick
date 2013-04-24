@@ -304,3 +304,61 @@ function my_remove_entries( $entry, $form ) {
         $sql = $wpdb->prepare( "DELETE FROM $lead_table WHERE id=%d", $lead_id );
         $wpdb->query( $sql );
 }
+
+add_filter("gform_pre_render_1", "populate_html");
+function populate_html($form)
+{
+    //this is a 2-page form with the data from page one being displayed in an html field on page 2
+    $current_page = GFFormDisplay::get_current_page($form["id"]);
+    $html_content = null;
+    if ($current_page == 3)
+    {
+        foreach($form["fields"] as &$field)
+        {
+            // Select a State
+            if ($field["id"] == 1)
+            {    
+            //get the label and then get the posted data for the field (this works for simple fields only - not the field groups like name and address)
+                $ss = rgpost('input_' . $field['id']);
+            }
+            if ($field["id"] >= 51 && $field["id"] <= 89 && $field["id"] != 85)
+            {    
+                $so .= rgpost('input_' . $field['id']);
+            }
+        }
+        // outside of loop
+        require('office_info_array.php');
+        $html_content = '<ul class="gform_fields left_label description_below">
+                            <!-- Office Info -->
+                            <li class="gfield gsection fieldset-top"><h2 class="gsection_title">Selected Office</h2></li>';
+        //address section
+        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Address</label>
+                            <div class="ginput_container">';
+        $html_content .= $o_array[$ss][$so]['address'] . "<br />" .
+                        $o_array[$ss][$so]['address2'] . "<br />" .
+                        $o_array[$ss][$so]['city'] . ", " . $o_array[$ss][$so]['state'] . " " . $o_array[$ss][$so]['zip'];
+        $html_content .= '</div></li>';
+        //phone and fax sections
+        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Phone</label>
+                            <div class="ginput_container">' . $o_array[$ss][$so]['phone'] . '</div></li>';
+        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Fax</label>
+                            <div class="ginput_container">' . $o_array[$ss][$so]['fax'] . '</div></li>';
+        // email section
+        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Email</label>
+                            <div class="ginput_container">' . $o_array[$ss][$so]['email'] . '</div></li>';
+        $html_content .= '</ul>';
+
+        //loop back through form fields to get html field (id 3 on my form) that we are populating with the data gathered above
+        foreach($form["fields"] as &$field)
+        {
+            //get html field
+            if ($field["id"] == 127)
+            {
+                //set the field content to the html
+                $field["content"] = $html_content;
+            }
+        }
+    }
+    //return altered form so changes are displayed
+    return $form;       
+}
