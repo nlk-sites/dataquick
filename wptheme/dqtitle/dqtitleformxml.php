@@ -99,8 +99,10 @@ function bool_it($string, $tad = null, $fad = null, $tf = true)
 {
 	$t = ($tf == true) ? 'true' : 'yes';
 	$f = ($tf == true) ? 'false' : 'no';
-	$t .= $tad;
-	$f .= $fad;
+	if (!empty($tad))
+		$t .= ' - ' . $tad;
+	if (!empty($fad))
+		$f .= ' - ' . $fad;
 	if (empty($string) || !$string) {
 		return $f;
 	} else {
@@ -288,7 +290,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Property Owner:' . $entry['21'] . ';'.
 					'Property Owner ' . $entry['23'] . ':' . format_phone_us($entry['22']) . ';'.
 					'Property Owner ' . $entry['25'] . ':' . format_phone_us($entry['24']) . ';'.
-					'Title Policy to be issued Other:' . bool_it($entry['112.3'], " - $entry['32']", null, true) . ';'.
+					'Title Policy to be issued Other:' . bool_it($entry['112.3'], $entry['32'], null, true) . ';'.
 					'Title Policy to be issued Owner:' . bool_it($entry['112.1']) . ';'.
 					'Title Policy to be issued Lender:' . bool_it($entry['112.2']) . ';'.
 					'Closing Services Req:' . bool_it($entry['33.1']) . ';'.
