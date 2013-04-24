@@ -97,6 +97,7 @@ if (empty($entry['104'])) { $mstatusb = "Unknown"; }
 $username = "gofer";
 $password = "f8stg0f3r";
 // array to parse and clean data
+/*
 $x = array();
 $x['requesting_party'] = [
 		'name' => $entry['2'],
@@ -224,6 +225,7 @@ $x['request'] = [
 				]
 			]
 		];
+*/
 
 // build xml
 $xml = '<?xml version="1.0" encoding="utf-8"?>'.
