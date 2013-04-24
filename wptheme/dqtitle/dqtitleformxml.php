@@ -2,28 +2,19 @@
 
 
 // selected state / office
-$selected_state = $entry['1'];
-$selected_office = null;
-$offices_array = array(51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67,68,69,88,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,87,89); // array of field id's for each state with offices in form
-foreach($offices_array as $v) {
-	if(!empty($entry[$v])) {
-		$selected_office = $entry[$v];
+function get_office()
+{
+	$state = $entry['1'];
+	$office = null;
+	$offices_array = array(51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67,68,69,88,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,87,89); // array of field id's for each state with offices in form
+	foreach($offices_array as $v) {
+		if(!empty($entry[$v])) {
+			$office = $entry[$v];
+		}
 	}
+	$selected_office = $state . ' ' . $office;
+	return $selected_office;
 }
-$selected_state_office = $selected_state . ' ' . $selected_office;
-
-// clean the array of not-allowed characters
-//foreach ($entry as &$v) {
-//    $v = $v;
-//}
-
-
-// title policy check boxes
-$title_policy = array();
-$title_policy[1] = (empty($entry['112.1'])) ? 'false' : 'true';
-$title_policy[2] = (empty($entry['112.2'])) ? 'false' : 'true';
-$title_policy[3] = (empty($entry['112.3'])) ? 'false' : 'true - ' . $entry['32'];
-
 // format phone numbers
 function format_phone_us($phone = '', $convert = true, $trim = true)
 {
@@ -91,10 +82,15 @@ function validate_it($value)
 		return $value;
 	}
 }
+//clean unwanteds from inputs
 function clean_it($string)
 {
-	$string = str_replace(' & ', ' and ', $string);
+	$string = str_replace('&', '_', $string);
+	$string = str_replace('<', '_', $string);
+	$string = str_replace('>', '_', $string);
+	return $string;
 }
+// validate boolean falses
 function bool_it($string, $tad = null, $fad = null, $tf = true)
 {
 	$t = ($tf == true) ? 'true' : 'yes';
@@ -109,13 +105,15 @@ function bool_it($string, $tad = null, $fad = null, $tf = true)
 		return $t;
 	}
 }
-if (empty($entry['99'])) { $mstatusa = "Unknown"; }
-if (empty($entry['104'])) { $mstatusb = "Unknown"; }
 
+// clean the array of not-allowed characters
+foreach ($entry as &$v) {
+    $v = clean_it($v);
+}
 
 //$curdatetime = new DateTime( date( 'n/d/Y g:i:s A', time() ), new DateTimeZone('America/New_York') );
-$username = "gofer";
-$password = "f8stg0f3r";
+//$username = "gofer";
+//$password = "f8stg0f3r";
 // array to parse and clean data
 /*
 $x = array();
@@ -305,7 +303,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 					'Second Home Zip:' . $entry['119'] . '">'.
 				'<BORROWER _SequenceIdentifier="" _FirstName="' . $entry['91'] . 
 						'" _LastName="' . $entry['92'] . 
-						'" _SSN="" MaritalStatusType="' . $mstatusa . '">'.
+						'" _SSN="" MaritalStatusType="' . validate_it($entry['99']) . '">'.
 					'<_RESIDENCE _StreetAddress="' . $entry['93'] . 
 						'" _City="' . $entry['95'] . 
 						'" _State="' . $entry['96'] . 
@@ -335,7 +333,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 						'" _City="' . $entry['110'] . 
 						'" _State="' . $entry['107'] . 
 						'" _PostalCode="' . $entry['106'] . 
-						'" MaritalStatusType="' . $mstatusb . '">'.
+						'" MaritalStatusType="' . validate_it($entry['104']) . '">'.
 					'<CONTACT_DETAIL>'.
 						'<CONTACT_POINT _RoleType="Work" _Type="Phone" _Value="' . format_phone_us($entry['105']) . '" />'.
 					'</CONTACT_DETAIL>'.
