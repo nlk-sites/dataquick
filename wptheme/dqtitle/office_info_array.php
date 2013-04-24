@@ -1,5 +1,5 @@
 <?php
-
+// this array is a list of all offices and their address / contact info
 $o_array = array(
 	//ALABAMA
 	'AL' => array(

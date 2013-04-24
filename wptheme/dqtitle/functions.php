@@ -235,26 +235,32 @@ add_action("gform_post_submission", "set_post_content", 10, 2);
 function set_post_content( $entry, $form ) {
     // Gravity Forms has validated the data
     $message = null;
-    /* Testing and debugging... */
+
+    /* Testing and debugging...
     $message = print_r($entry, true);
     $message = wordwrap($message, 70);
-    /**/
+    */
 
-    // Custom Form action
+    // Custom Form action, returns formatted XML as $xml var
     if($form['id'] == 1) {
-        require('dqtitleformxml.php');
+        require('dqtitleformxml.php'); // located in "wp-content/themes/dqtitle/"
         $message .= $xml;
     }
-    // start curl
+    
+    // gofer login info
     $username = 'gofer';
     $password = 'f8stg0f3r';
+
+    /* * * * * * CHANGE $sendto FOR LIVE * * * * * */
     // Test site...
     $sendto = "https://test.webservices.rels.info/gofer/receiver.aspx";
     // Production site...
     // $sendto = "https://webservices.rels.info/gofer/receiver.aspx";
+
+    //begin curl submit
     if ( isset($sendto) ):
         $ch = curl_init($sendto);
-        $fp = fopen("xml_file.txt", "w");
+        //$fp = fopen("xml_file.txt", "w");
         curl_setopt($ch, CURLOPT_MUTE, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
@@ -266,15 +272,15 @@ function set_post_content( $entry, $form ) {
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         $output = curl_exec($ch);
         $result = print_r(curl_getinfo($ch), true);
-        fwrite($fp, $output);
+        //fwrite($fp, $output);
         curl_close($ch);
-        fclose($fp);
-        $resultant = '==> ' . $result . ' | ' . $output . "\n\r";
+        //fclose($fp);
+        $resultant = 'cURL Result: ' . $result . "\n\r" . 'Gofer Response: ' . $output . "\n\r" . 'Submitted XML: ' . $xml;
     endif;
     // end curl
 
     // Send email for debugging purposes
-    mail($entry['7'], 'DQTitle Place Order debug (RTW' . ( 20000000 + $entry['id'] ) . ')', "$resultant $message");
+    mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 20000000 + $entry['id'] ) . ')', $resultant);
 }
 
 // Delete any posts to database so information is not stored
@@ -305,6 +311,8 @@ function my_remove_entries( $entry, $form ) {
         $wpdb->query( $sql );
 }
 
+
+// Custom action to display Selected Office of page 3 of place order form (form ID 1)
 add_filter("gform_pre_render_1", "populate_html");
 function populate_html($form)
 {
@@ -320,27 +328,33 @@ function populate_html($form)
             if ($field["id"] == 1)
             {    
             //get the label and then get the posted data for the field (this works for simple fields only - not the field groups like name and address)
-                $ss = rgpost('input_' . $field['id']);
+                $ss = rgpost('input_' . $field['id']); // selected state
             }
-            //select office
+            //select office from range of input options
             if ($field["id"] >= 51 && $field["id"] <= 89 && $field["id"] != 85)
             {    
-                $so .= rgpost('input_' . $field['id']);
+                $so .= rgpost('input_' . $field['id']); // selected office
             }
         }
         // outside of loop
+
+        // This generates the HTML to be displayed on confirmation page
         require('office_info_array.php');
-        $html_content = '<ul class="gform_fields left_label description_below"><!-- Office Info --><li class="gfield gsection fieldset-top"><h2 class="gsection_title">Selected Office</h2></li>';
-        //address section
-        $html_content .= '<li class="gfield fieldset"><label class="gfield_label" style="min-height:60px;">Office Address</label><div class="ginput_container" style="min-height:60px;">';
-        $html_content .= $o_array[$ss][$so]['address'] . "<br />" . $o_array[$ss][$so]['address2'] . "<br />" . $o_array[$ss][$so]['city'] . ", " . $o_array[$ss][$so]['state'] . " " . $o_array[$ss][$so]['zip'];
-        $html_content .= '</div></li>';
-        //phone and fax sections
-        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Phone</label><div class="ginput_container">' . $o_array[$ss][$so]['phone'] . '</div></li>';
-        $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Fax</label><div class="ginput_container">' . $o_array[$ss][$so]['fax'] . '</div></li>';
-        // email section
-        $html_content .= '<li class="gfield fieldset-bottom"><label class="gfield_label">Office Email</label><div class="ginput_container">' . $o_array[$ss][$so]['email'] . '</div></li>';
-        $html_content .= '</ul>';
+
+        // if office exists in array
+        if ($o_array[$ss][$so]) {
+            $html_content = '<ul class="gform_fields left_label description_below"><!-- Office Info --><li class="gfield gsection fieldset-top"><h2 class="gsection_title">Selected Office</h2></li>';
+            //address section
+            $html_content .= '<li class="gfield fieldset"><label class="gfield_label" style="min-height:60px;">Office Address</label><div class="ginput_container" style="min-height:60px;">';
+            $html_content .= $o_array[$ss][$so]['address'] . "<br />" . $o_array[$ss][$so]['address2'] . "<br />" . $o_array[$ss][$so]['city'] . ", " . $o_array[$ss][$so]['state'] . " " . $o_array[$ss][$so]['zip'];
+            $html_content .= '</div></li>';
+            //phone and fax sections
+            $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Phone</label><div class="ginput_container">' . $o_array[$ss][$so]['phone'] . '</div></li>';
+            $html_content .= '<li class="gfield fieldset"><label class="gfield_label">Office Fax</label><div class="ginput_container">' . $o_array[$ss][$so]['fax'] . '</div></li>';
+            // email section
+            $html_content .= '<li class="gfield fieldset-bottom"><label class="gfield_label">Office Email</label><div class="ginput_container">' . $o_array[$ss][$so]['email'] . '</div></li>';
+            $html_content .= '</ul>';
+        }
 
         //loop back through form fields to get html field (id 3 on my form) that we are populating with the data gathered above
         foreach($form["fields"] as &$field)
