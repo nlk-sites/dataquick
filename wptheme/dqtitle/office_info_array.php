@@ -15,7 +15,7 @@ $o_array = array(
 			),
 		'Mobile' => array(
 			'address' => '1101 Hillcrest Road',
-			'address2' => '',
+			'address2' => 'Suite 100',
 			'city' => 'Mobile',
 			'state' => 'AL',
 			'zip' => '36695',
@@ -217,6 +217,19 @@ $o_array = array(
 			'email' => 'RCCOrders@dataquick.com',
 			),
 		),
+	//MASSECHUSETS
+	'MA' => array(
+		'DataQuick Title - National Accounts' => array(
+			'address' => '6 Campus Circle',
+			'address2' => 'Suite 430',
+			'city' => 'Westlake',
+			'state' => 'TX',
+			'zip' => '76262',
+			'phone' => '(800) 501-2766',
+			'fax' => '(866) 501-7155',
+			'email' => 'RCCOrders@dataquick.com',
+			),
+		),
 	//MAINE
 	'ME' => array(
 		'DataQuick Title - National Accounts' => array(
@@ -406,7 +419,7 @@ $o_array = array(
 			'zip' => '55114',
 			'phone' => '(651) 647-4855',
 			'fax' => '(866) 797-5829',
-			'email' => 'RelsTitle.MN@dataquick.com ',
+			'email' => 'MN-StPaul@dataquick.com',
 			),
 		'St. Paul - 2nd Mortgage' => array(
 			'address' => '2550 University Ave W ',
@@ -416,7 +429,7 @@ $o_array = array(
 			'zip' => '55114',
 			'phone' => '(651) 647-4856',
 			'fax' => '(866) 797-5830',
-			'email' => 'RelsTitle.MN@dataquick.com ',
+			'email' => 'MN-StPaul@dataquick.com',
 			),
 		'West Metro Executive Services' => array(
 			'address' => '600 S Hwy 169',
@@ -478,6 +491,32 @@ $o_array = array(
 			'email' => 'RCCOrders@dataquick.com',
 			),
 		),
+	//NORTH CAROLINA
+	'NC' => array(
+		'DataQuick Title - National Accounts' => array(
+			'address' => '6 Campus Circle',
+			'address2' => 'Suite 430',
+			'city' => 'Westlake',
+			'state' => 'TX',
+			'zip' => '76262',
+			'phone' => '(800) 501-2766',
+			'fax' => '(866) 501-7155',
+			'email' => 'RCCOrders@dataquick.com',
+			),
+		),
+	//NORTH DAKOTA
+	'ND' => array(
+		'DataQuick Title - National Accounts' => array(
+			'address' => '6 Campus Circle',
+			'address2' => 'Suite 430',
+			'city' => 'Westlake',
+			'state' => 'TX',
+			'zip' => '76262',
+			'phone' => '(800) 501-2766',
+			'fax' => '(866) 501-7155',
+			'email' => 'RCCOrders@dataquick.com',
+			),
+		),
 	//NEBRASKA
 	'NE' => array(
 		'Lincoln' => array(
@@ -513,6 +552,19 @@ $o_array = array(
 		),
 	//NEW HAMPSHIRE
 	'NH' => array(
+		'DataQuick Title - National Accounts' => array(
+			'address' => '6 Campus Circle',
+			'address2' => 'Suite 430',
+			'city' => 'Westlake',
+			'state' => 'TX',
+			'zip' => '76262',
+			'phone' => '(800) 501-2766',
+			'fax' => '(866) 501-7155',
+			'email' => 'RCCOrders@dataquick.com',
+			),
+		),
+	//NEW JERSEY
+	'NJ' => array(
 		'DataQuick Title - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
