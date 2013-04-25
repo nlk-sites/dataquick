@@ -2,19 +2,21 @@
 
 
 // selected state / office
-function get_office()
-{
+//function get_office()
+//{
 	$state = $entry['1'];
 	$office = null;
-	$offices_array = array(51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67,68,69,88,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,87,89); // array of field id's for each state with offices in form
+	// array of field id's for each state with offices in gravity form
+	$offices_array = array(51,52,53,54,55,56,57,59,60,61,62,63,64,65,66,67,68,69,88,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,87,89);
 	foreach($offices_array as $v) {
 		if(!empty($entry[$v])) {
 			$office = $entry[$v];
 		}
 	}
 	$selected_office = $state . ' ' . $office;
-	return $selected_office;
-}
+//	return $selected_office;
+//}
+
 // format phone numbers
 function format_phone_us($phone = '', $convert = true, $trim = true)
 {
@@ -279,7 +281,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 		'<KEY _Name="ORSTransactionID" _Value="" />'.
 		'<REQUEST_DATA>'.
 			'<TITLE_REQUEST _ActionType="Original" _Comment="'.
-					'Office Selected:' . get_office() . ';'.
+					'Office Selected:' . $selected_office . ';'.
 					'AdditionalComments:' . $entry['16'] . ';'. // was missing ; for initial testing
 					'Requester Company:' . $entry['3'] . ';'.
 					'Lendor Name:' . $entry['12'] . ';'.
