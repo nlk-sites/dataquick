@@ -279,7 +279,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 		'<KEY _Name="ORSTransactionID" _Value="" />'.
 		'<REQUEST_DATA>'.
 			'<TITLE_REQUEST _ActionType="Original" _Comment="'.
-					'Office Selected:' . $selected_state . ' ' . $selected_office . ';'.
+					'Office Selected:' . get_office() . ';'.
 					'AdditionalComments:' . $entry['16'] . ';'. // was missing ; for initial testing
 					'Requester Company:' . $entry['3'] . ';'.
 					'Lendor Name:' . $entry['12'] . ';'.
