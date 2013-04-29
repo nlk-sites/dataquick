@@ -180,7 +180,7 @@ $o_array = array(
 		),
 	//KANSAS
 	'KS' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -193,7 +193,7 @@ $o_array = array(
 		),
 	//KENTUCKY
 	'KY' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
