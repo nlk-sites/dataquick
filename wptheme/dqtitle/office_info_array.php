@@ -36,7 +36,7 @@ $o_array = array(
 		),
 	//COLORADO
 	'CO' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -49,7 +49,7 @@ $o_array = array(
 		),
 	//DELEWARE
 	'DE' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -62,7 +62,7 @@ $o_array = array(
 		),
 	//DISTRICT of COLUMBIA
 	'DC' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -128,7 +128,7 @@ $o_array = array(
 		),
 	//GEORGIA
 	'GA' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -141,7 +141,7 @@ $o_array = array(
 		),
 	//ILLINOIS
 	'IL' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -154,7 +154,7 @@ $o_array = array(
 		),
 	//INDIANA
 	'IN' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -167,7 +167,7 @@ $o_array = array(
 		),
 	//IOWA
 	'IA' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -206,7 +206,7 @@ $o_array = array(
 		),
 	//LOUISIANA
 	'LA' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -219,7 +219,7 @@ $o_array = array(
 		),
 	//MASSECHUSETS
 	'MA' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -232,7 +232,7 @@ $o_array = array(
 		),
 	//MAINE
 	'ME' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -454,7 +454,7 @@ $o_array = array(
 		),
 	//MISSISSIPPI
 	'MS' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -467,7 +467,7 @@ $o_array = array(
 		),
 	//MISSOURI
 	'MO' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -480,7 +480,7 @@ $o_array = array(
 		),
 	//MONTANA
 	'MT' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -493,7 +493,7 @@ $o_array = array(
 		),
 	//NORTH CAROLINA
 	'NC' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -506,7 +506,7 @@ $o_array = array(
 		),
 	//NORTH DAKOTA
 	'ND' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -552,7 +552,7 @@ $o_array = array(
 		),
 	//NEW HAMPSHIRE
 	'NH' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -565,7 +565,7 @@ $o_array = array(
 		),
 	//NEW JERSEY
 	'NJ' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -604,7 +604,7 @@ $o_array = array(
 		),
 	//PENNSYLVANIA
 	'PA' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -617,7 +617,7 @@ $o_array = array(
 		),
 	//RHODE ISLAND
 	'RI' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -630,7 +630,7 @@ $o_array = array(
 		),
 	//SOUTH CAROLINA
 	'SC' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -656,7 +656,7 @@ $o_array = array(
 		),
 	//TENNESSEE
 	'TN' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -669,7 +669,7 @@ $o_array = array(
 		),
 	//VERMONT
 	'VT' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -695,7 +695,7 @@ $o_array = array(
 		),
 	//WEST VIRGINIA
 	'WV' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
@@ -708,7 +708,7 @@ $o_array = array(
 		),
 	//WISCONSIN
 	'WI' => array(
-		'DataQuick Title - National Accounts' => array(
+		'DataQuickTitle - National Accounts' => array(
 			'address' => '6 Campus Circle',
 			'address2' => 'Suite 430',
 			'city' => 'Westlake',
