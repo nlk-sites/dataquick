@@ -540,3 +540,4 @@ function populate_html($form)
     //return altered form so changes are displayed
     return $form;
 }
+

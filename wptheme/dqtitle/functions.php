@@ -227,6 +227,7 @@ class GWPreviewConfirmation {
 
 
 // - - - - - GRAVITY FORMS MODS - - - - - //
+remove_filter("gform_pre_render_10", "populate_html");
 
 // Creating custom post action to send XML to rels gofer
 GWPreviewConfirmation::init();
