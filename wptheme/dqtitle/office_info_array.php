@@ -718,6 +718,6 @@ $o_array = array(
 			'fax' => '(866) 501-7155',
 			'email' => 'RCCOrders@dataquick.com',
 			),
-		),
+		)
 	);
 ?>
