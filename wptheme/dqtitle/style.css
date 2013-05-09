@@ -31,6 +31,7 @@ h1, #home h1 { font: 38px/42px Arial, Helvetica, sans-serif; margin: 19px 0 1px 
 #ipc li.closings { margin-right:27px; width: 109px; text-align: center; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf }
 body.cus #ipc li.current-menu-item a { color:#000; font-weight: bold }
 #ipc li.on a { color: #000 !important }
+#ipc li.last-child { border-right: none !important; }
 /*
 body.ind #ipc li.page-item-19 { border-left: none }
 body.pro #ipc li.page-item-19 { border: none; margin-right: 35px }
@@ -288,10 +289,16 @@ li.gfield .ginput_container .textarea {
 	width: 618px;
 	height: 96px;
 }
+
+
 li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
 	float: left;
-	width: 80px;
-	margin-right: 10px;
+	width: 90px;;
+	margin-right: 5px;
+}
+
+#field_1_36_1, #field_1_36_2, #field_1_36_3 {
+width: 40px !important;
 }
 
 
@@ -358,7 +365,9 @@ li.gfield_error input, li.gfield_error select {
 div#gforms_confirmation_message {
 	padding-top: 100px;
 }
-
+body.page-template-page-placeorder-php div#rfx {
+	display: none;
+}
 /*contact us*/
 .contact.typeface-js {
 	padding-right: 60px;
