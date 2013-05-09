@@ -87,10 +87,7 @@ function validate_it($value)
 //clean unwanteds from inputs
 function clean_it($string)
 {
-	$string = str_replace('&', '_', $string);
-	$string = str_replace('<', '_', $string);
-	$string = str_replace('>', '_', $string);
-	return $string;
+	return str_replace(array('&', '<', '>', '\'', '"'), array('&amp;', '&lt;', '&gt;', '&apos;', '&quot;'), $string);
 }
 // validate boolean falses
 function bool_it($string, $tad = null, $fad = null, $tf = true)
