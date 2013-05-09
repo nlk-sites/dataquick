@@ -244,7 +244,9 @@ function set_post_content( $entry, $form ) {
     // Custom Form action, returns formatted XML as $xml var
     if($form['id'] == 1) {
         require('dqtitleformxml.php'); // located in "wp-content/themes/dqtitle/"
-        $message .= $xml;
+        //$message .= $xml;
+        include('office_info_array.php');
+        include('dqtitle_emailconfirm.php'); // let's add the confirmation email
     }
     
     // gofer login info
