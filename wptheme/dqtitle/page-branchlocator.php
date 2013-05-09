@@ -30,7 +30,7 @@ if(is_page(139)) { /*sitemap*/
 if($demo_link) echo '<a href="'.$demo_link.'" rel="nofollow" class="ar" target="_blank"><span class="demo"></span>View Demo</a>';
 if($login_link) echo '<a href="'.$login_link.'" rel="nofollow" class="ar">Customer Login</a>';
 ?>
-<a href="http://www.relstitle.info/PlaceOrder.aspx" class="ar" target="_blank">Place an Order</a>
+<a href="<?php echo get_permalink(135); ?>" class="ar" target="_parent">Place an Order</a>
 <a href="<?php echo get_permalink(57); ?>" class="ar last">Branch Locator</a>
 <div></div>
 </div>
