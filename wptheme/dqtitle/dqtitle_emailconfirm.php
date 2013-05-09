@@ -14,7 +14,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 <table>
 <tbody>
 <tr><th colspan=\"2\">Office Info</th></tr>
-<tr><td>Selected Office</td><td>".$state ".$office</td></tr>
+<tr><td>Selected Office</td><td>".$state." ".$office."</td></tr>
 <tr><td>Address</td><td>".$office_info['address']."<br />
 						".$office_info['address2']."<br />
 						".$office_info['city'].", ".$office_info['state']." ".$office_info['zip']."<br /></td></tr>
