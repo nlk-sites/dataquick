@@ -299,12 +299,13 @@ li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
 
 li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
 	float: left;
-	width: 90px;;
-	margin-right: 5px;
+	width: 86px;;
+	/* margin-right: 5px;*/
 }
 
 #input_1_36_1, #input_1_36_2, #input_1_36_3 {
 	width: 40px !important;
+	margin-left: 4px;
 }
 .gfield_date_year.ginput_container {
 	clear: right;
