@@ -282,9 +282,9 @@ function set_post_content( $entry, $form ) {
     // end curl
 
     // Send email for debugging purposes -> COMMENT OUT FOR PRODUCTION
-    mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 20000000 + $entry['id'] ) . ')', $resultant);
+    //mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 20000000 + $entry['id'] ) . ')', $resultant);
     // Production email confirmation send...
-    mail($entry['7'], $subject, $body);
+    mail($entry['7'], $subject, $body, $headers);
 }
 
 // Delete any posts to database so information is not stored

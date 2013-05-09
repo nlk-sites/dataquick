@@ -3,9 +3,10 @@
 /* - - - - - EMAIL CONFIRMATION FORM - - - - - */
 $office_info = $o_array[$state][$office];
 
-$headers = "From: ".$office_info['email']."\r\n";
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= "From: ".$office_info['email']."\r\n";
 $headers .= "Reply-To: ".$office_info['email']."\r\n";
-$headers .= "Content-Type: text/html;\r\n";
 
 $subject = 'Order Placed with DataQuick Title';
 $body = "<p>Hello ".$entry['2'].",</p>
