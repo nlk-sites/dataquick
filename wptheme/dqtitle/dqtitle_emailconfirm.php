@@ -12,6 +12,7 @@ $subject = 'Order Placed with DataQuick Title';
 $body = "<p>Hello ".$entry['2'].",</p>
 <p>Thank you for placing your order with DataQuick Title. The details of your order appear below. Please let us know if you have any questions or concerns.</p>";
 
+//open table
 $body .= "<table><tbody>";
 
 //<!-- Office Info -->
@@ -86,6 +87,14 @@ $body .= ($entry['27.1'] == 'Yes') ? "<tr><th colspan=\"2\" style=\"text-align:l
 <tr><td>Address</td><td>".$entry['123']." ".$entry['122']."</td></tr>
 <tr><td>City, County, State Zip</td><td>".$entry['121'].", ".$entry['124'].", ".$entry['120']." ".$entry['119']."</td></tr>" : null;
 
+//close table
 $body .= "</tbody></table>";
+
+//signature, etc.
+$body .= "<p>Thank you for your order.</p>
+			<p>DataQuick Title</p>
+			<p><img src=\"".home_url('/')."wp-content/themes/dqtitle/images/image001.jpg\" /></p>
+			<p><a href=\"http://www.dataquicktitle.com\">www.dataquicktitle.com</a></p>
+			<p style=\"font-size:8pt;\">The information contained in this electronic communication is intended only for the recipient named above. This communication may be confidential or privileged and exempt from disclosure under applicable law. If you are not an intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please delete the original and all copies of it from your computer system; also delete or destroy all copies of this communication that you may have made in any other medium. Then notify the sender of the erroneous delivery. Thank you.</p>";
 
 ?>
