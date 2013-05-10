@@ -14,7 +14,10 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <table>
 <tbody>
-<tr><th colspan=\"2\">Office Info</th></tr>
+
+<!-- Office Info -->
+
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Office Info</th></tr>
 <tr><td>Selected Office</td><td>".$state." ".$office."</td></tr>
 <tr><td>Address</td><td>".$office_info['address']."<br />
 						".$office_info['address2']."<br />
@@ -22,11 +25,11 @@ $body = "<p>Hello ".$entry['2'].",</p>
 <tr><td>Phone</td><td>".$office_info['phone']."</td></tr>
 <tr><td>Fax</td><td>".$office_info['fax']."</td></tr>
 <tr><td>Email</td><td>".$office_info['email']."</td></tr>
-<tr>td colspan=\"2\"></td></tr>
+<tr><td colspan=\"2\"></td></tr>
 
 <!-- General Info -->
 
-<tr><th colspan=\"2\">General Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">General Info</th></tr>
 <tr><td>Your Name</td><td>".$entry['2']."</td></tr>
 <tr><td>Company Name</td><td>".$entry['3']."</td></tr>
 <tr><td>Phone Number</td><td>".$entry['8']."</td></tr>
@@ -40,7 +43,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <!-- Lender Info -->
 
-<tr><th colspan=\"2\">Lender Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Lender Info</th></tr>
 <tr><td>Lender Name</td><td>".$entry['12']."</td></tr>
 <tr><td>Lender Loan Number</td><td>".$entry['13']."</td></tr>
 <tr><td>Lender Phone Number</td><td>".$entry['14']."</td></tr>
@@ -49,7 +52,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <!-- Property Info -->
 
-<tr><th colspan=\"2\">Property Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Property Info</th></tr>
 <tr><td>Transaction Type</td><td>".$entry['20']." ".$entry['109']."</td></tr>
 <tr><td>Current Owner</td><td>".$entry['21']."</td></tr>
 <tr><td>Phone Number 1</td><td>".$entry['22']." - ".$entry['23']."</td></tr>
@@ -69,7 +72,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <!-- Borrower Info -->
 
-<tr><th colspan=\"2\">Borrower Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Borrower Info</th></tr>
 <tr><td>Primary Name</td><td>".$entry['91']."</td></tr>
 <tr><td>Secondary Name</td><td>".$entry['92']."</td></tr>
 <tr><td>Address</td><td>".$entry['93']." ".$entry['94']."</td></tr>
@@ -79,7 +82,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <!-- Seller Info -->
 
-<tr><th colspan=\"2\">Seller Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Seller Info</th></tr>
 <tr><td>Primary Name</td><td>".$entry['101']."</td></tr>
 <tr><td>Secondary Name</td><td>".$entry['102']."</td></tr>
 <tr><td>Address</td><td>".$entry['103']." ".$entry['108']."</td></tr>
@@ -89,7 +92,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 
 <!-- 2nd Home / Investment Info -->
 
-<tr><th colspan=\"2\">2nd Home / Investment Info</th></tr>
+<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">2nd Home / Investment Info</th></tr>
 <tr><td>Address</td><td>".$entry['123']." ".$entry['122']."</td></tr>
 <tr><td>City, County, State Zip</td><td>".$entry['121'].", ".$entry['124'].", ".$entry['120']." ".$entry['119']."</td></tr>
 </tbody>
