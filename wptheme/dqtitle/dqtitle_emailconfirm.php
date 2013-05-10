@@ -13,7 +13,7 @@ $body = "<p>Hello ".$entry['2'].",</p>
 <p>Thank you for placing your order with DataQuick Title. The details of your order appear below. Please let us know if you have any questions or concerns.</p>";
 
 //open table
-$body .= "<table><tbody>";
+$body .= "<table style=\"border-top:1px solid black; border-bottom:1px solid black;\"><tbody>";
 
 //<!-- Office Info -->
 $body .= "<tr><th colspan=\"2\" style=\"text-align:left; text-indent:10px; margin-top:10px;\">Office Info</th></tr>
@@ -91,7 +91,7 @@ $body .= ($entry['27.1'] == 'Yes') ? "<tr><th colspan=\"2\" style=\"text-align:l
 $body .= "</tbody></table>";
 
 //signature, etc.
-$body .= "<p>Thank you for your order.</p>
+$body .= "<p>&nbsp;<br />Thank you for your order.</p>
 			<p>DataQuick Title</p>
 			<p><img src=\"".home_url('/')."wp-content/themes/dqtitle/images/image001.jpg\" /></p>
 			<p><a href=\"http://www.dataquicktitle.com\">www.dataquicktitle.com</a></p>
