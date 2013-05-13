@@ -48,7 +48,9 @@ div#rt .b.get.c div { background-position: 0 100%; height: 16px; padding-top: 0 
 #ftr .e { margin-top: 0; width: 100% }
 #ftr .so { height: auto; padding: 0; border: none }
 
-
+.menu li.last-child {
+	border-right: none !important;
+}
 
 /* * * * * place an order form * * * * */
 .page-template-page-placeorder-php h1 {
