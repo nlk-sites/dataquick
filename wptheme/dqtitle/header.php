@@ -55,7 +55,7 @@
         <div id="abt"><a href="http://www.dataquick.com/" target="_blank">DataQuick Home</a> &nbsp;|&nbsp; <a href="<?php echo get_permalink(78); ?>">About Us</a></div>
         
         <?php wp_nav_menu(array('container' => '','theme_location'=>'main','menu_id'=>'ipc')); ?>
-        <div class="contact typeface-js"><a href="http://ninthlink.me/title/contact-us/" target="_blank">Contact Us</a></div>
+        <div class="contact typeface-js"><a href="<?php echo get_permalink(92); ?>" target="_blank">Contact Us</a></div>
         <div id="drp"><div class="t"></div><div class="e"></div></div>
         <select name="ql" onchange="window.location.href = this.value;" id="ql">
           <option selected value="#">Customer Login</option>
