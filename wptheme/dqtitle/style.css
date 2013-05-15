@@ -26,8 +26,8 @@ h1, #home h1 { font: 38px/42px Arial, Helvetica, sans-serif; margin: 19px 0 1px 
 /* nav */
 #drp { border: none }
 #drp .t, #drp .e { display: none; background: none }
-#ipc { margin-left: 134px }
-#ipc li.title { width: 117px }
+#ipc { margin-left: 120px }
+#ipc li.title { width: 131px }
 #ipc li.closings { margin-right:27px; width: 109px; text-align: center; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf }
 body.cus #ipc li.current-menu-item a { color:#000; font-weight: bold }
 #ipc li.on a { color: #000 !important }

@@ -36,8 +36,8 @@ function dqtitle_bodyclass($classes) {
 			$classes[] = 'dir';
 		} elseif(!is_page_template('dqhome.php')) {
 			$classes[] = 'cus';
-			if ( is_page('title-products') ) $classes[] = 'title';
-			if ( is_page('closings') ) $classes[] = 'closings';
+			if ( is_page(array('title-products','industry-solutions')) ) $classes[] = 'title';
+			if ( is_page(array('closings','products')) ) $classes[] = 'closings';
 			if ( is_page('other') ) $classes[] = 'other';
 		}
 	} else {
