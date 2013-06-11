@@ -63,47 +63,50 @@ hear about us?*</label></td><td width="166"><select id="lead_source" name="lead_
 <option value="Other">Other</option>
 <option value="News/Newspaper/Magazine">News/Newspaper/Magazine</option>
 </select></td></tr>
-<tr><td><label for="industry">What industry<br />are you in?</label></td><td><select id="industry" name="industry" style="width:166px"><option value="" selected="selected">Please Select</option><option value="Accountants">Accountants</option>
-<option value="Appraisers">Appraisers</option>
-<option value="Bail Bonds">Bail Bonds</option>
-<option value="Banks">Banks</option>
-<option value="Banks/Savings &amp; Loan">Banks/Savings &amp; Loan</option>
-<option value="Broker/B2B">Broker/B2B</option>
-<option value="Construction">Construction</option>
-<option value="Consultants">Consultants</option>
-<option value="Credit, Collections">Credit, Collections</option>
-<option value="Credit Union">Credit Union</option>
-<option value="Education">Education</option>
-<option value="Escrow">Escrow</option>
-<option value="Financial Services">Financial Services</option>
-<option value="Foreclosure">Foreclosure</option>
-<option value="Fundraiser">Fundraiser</option>
-<option value="Government">Government</option>
-<option value="Heating, AC, Plumbing, Hardware">Heating, AC, Plumbing, Hardware</option>
-<option value="Insurance">Insurance</option>
-<option value="Investors - Institutional">Investors - Institutional</option>
-<option value="Investors - Real Estate">Investors - Real Estate</option>
-<option value="Lawyer">Lawyer</option>
-<option value="Marketing">Marketing</option>
-<option value="Mortgage">Mortgage</option>
-<option value="Mortgage Lending">Mortgage Lending</option>
-<option value="National Bank">National Bank</option>
-<option value="Private Investigator">Private Investigator</option>
-<option value="Publisher, Printing">Publisher, Printing</option>
-<option value="Real Estate/Sales/Brokers">Real Estate/Sales/Brokers</option>
-<option value="Regional Bank">Regional Bank</option>
-<option value="Research">Research</option>
-<option value="Reseller">Reseller</option>
-<option value="Retail">Retail</option>
-<option value="Secondary Market">Secondary Market</option>
-<option value="Servicer">Servicer</option>
-<option value="Servicing">Servicing</option>
-<option value="Subprime">Subprime</option>
-<option value="Title Companies">Title Companies</option>
-<option value="Utilities">Utilities</option>
-<option value="Valuation">Valuation</option>
-<option value="Other">Other</option>
-</select>
+<tr><td><label for="industry">What industry<br />are you in?*</label></td><td>
+	<select id="industry" name="industry" style="width:166px" class="req">
+		<option value="" selected="selected">Please Select</option>
+		<option value="Accountants" sendto="wtol" >Accountants</option>
+		<option value="Appraisers" sendto="dqsales" >Appraisers</option>
+		<option value="Bail Bonds" sendto="wtol" >Bail Bonds</option>
+		<option value="Banks" sendto="dqsales" >Banks</option>
+		<option value="Banks/Savings &amp; Loan" sendto="dqsales" >Banks/Savings &amp; Loan</option>
+		<option value="Broker/B2B" sendto="wtol" >Broker/B2B</option>
+		<option value="Construction" sendto="wtol" >Construction</option>
+		<option value="Consultants" sendto="wtol" >Consultants</option>
+		<option value="Credit, Collections" sendto="wtol" >Credit, Collections</option>
+		<option value="Credit Union" sendto="dqsales" >Credit Union</option>
+		<option value="Education" sendto="wtol" >Education</option>
+		<option value="Escrow" sendto="wtol" >Escrow</option>
+		<option value="Financial Services" sendto="dqsales" >Financial Services</option>
+		<option value="Foreclosure" sendto="wtol" >Foreclosure</option>
+		<option value="Fundraiser" sendto="wtol" >Fundraiser</option>
+		<option value="Government" sendto="wtol" >Government</option>
+		<option value="Heating, AC, Plumbing, Hardware" sendto="wtol" >Heating, AC, Plumbing, Hardware</option>
+		<option value="Insurance" sendto="wtol" >Insurance</option>
+		<option value="Investors - Institutional" sendto="dqsales" >Investors - Institutional</option>
+		<option value="Investors - Real Estate" sendto="wtol" >Investors - Real Estate</option>
+		<option value="Lawyer" sendto="wtol" >Lawyer</option>
+		<option value="Marketing" sendto="wtol" >Marketing</option>
+		<option value="Mortgage" sendto="dqsales" >Mortgage</option>
+		<option value="Mortgage Lending" sendto="dqsales" >Mortgage Lending</option>
+		<option value="National Bank" sendto="dqsales" >National Bank</option>
+		<option value="Private Investigator" sendto="wtol" >Private Investigator</option>
+		<option value="Publisher, Printing" sendto="wtol" >Publisher, Printing</option>
+		<option value="Real Estate/Sales/Brokers" sendto="wtol" >Real Estate/Sales/Brokers</option>
+		<option value="Regional Bank" sendto="dqsales" >Regional Bank</option>
+		<option value="Research" sendto="wtol" >Research</option>
+		<option value="Reseller" sendto="wtol" >Reseller</option>
+		<option value="Retail" sendto="wtol" >Retail</option>
+		<option value="Secondary Market" sendto="dqsales" >Secondary Market</option>
+		<option value="Servicer" sendto="dqsales" >Servicer</option>
+		<option value="Servicing" sendto="dqsales" >Servicing</option>
+		<option value="Subprime" sendto="dqsales" >Subprime</option>
+		<option value="Title Companies" sendto="wtol" >Title Companies</option>
+		<option value="Utilities" sendto="wtol" >Utilities</option>
+		<option value="Valuation" sendto="dqsales" >Valuation</option>
+		<option value="Other" sendto="wtol" >Other</option>
+	</select>
 </td></tr>
 <tr><td><label>What product line are you interested in?</label></td>
 <td><select name="dqproductline" class="dqproductline"><option>Residential Credit Solutions</option>

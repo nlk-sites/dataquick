@@ -266,9 +266,11 @@ if ( ! function_exists( 'dq_header_check' ) ):
 function dq_header_check(){
 	if($_REQUEST['dq_action'] == 'dqemail') {
 		$dqproductline = $_REQUEST['dqproductline'];
+		$industry = $_REQUEST['industry'];
+		$industry_array = array('Appraisers','Banking','Banks','Banks/Savings & Loan','Banks/Savings &amp; Loan','redit Union','inancial Services','Investors - Institutional','Mortgage','Mortgage Lending','National Bank','Regional Bank','Secondary Market','Servicer','Servicing','Subprime','Valuation');
 		$mailto = false;
 		$sub = 'New DataQuick.com Lead';
-		if ( in_array($dqproductline, array('Property Research &amp; Marketing', 'Property Research & Marketing')) == false ) {
+		if ( ( in_array($dqproductline, array('Property Research &amp; Marketing', 'Property Research & Marketing')) == false ) || ( in_array($industry, $industry_array) == false ) ) {
 			if ( isset($_REQUEST['oid']) ) { // webtolead -> all go to sales@dataquick
 				$mailto = 'sales@dataquick.com';
 			} else { // webtocase

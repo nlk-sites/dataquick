@@ -252,6 +252,26 @@ jQuery(function($) {
             });
 		});
 	}
+
+	if ( $('#industry').size() > 0 ) {
+		$('#industry').each(function() {
+			var frm = $(this).parents('form');
+			frm.data('origact', frm.attr('action'));
+			
+			$(this).change(function() {
+				var sendto = $('option:selected', this).attr('sendto');
+				var frm = $(this).parents('form');
+				switch(sendto) {
+					case 'wtol':
+						frm.attr('action', 'https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8');
+						break;
+					default:
+						frm.attr('action', frm.data('origact'));
+						break;	
+				}
+			}).trigger('change');
+		});
+	}
 	
 	if ( $('#home p').size() > 1 ) {
 		$('#home p:eq(0)').fadeIn(600,function() {
