@@ -101,7 +101,7 @@ if(is_page_template('dqdirect.php')) { ?>
 <div class="recaptchahere">
 <?php
 switch($_SERVER['SERVER_NAME']) {
-	case 'ninthlink.me':
+	case 'dataquick.ninthlink.me':
 		$publickey = "6Lf7R94SAAAAAA2nldFqOsMBhEamxUQ-zf_M1MIS";
 		break;
 	default:

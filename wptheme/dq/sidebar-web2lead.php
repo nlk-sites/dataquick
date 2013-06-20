@@ -117,7 +117,7 @@ hear about us?*</label></td><td width="166"><select id="lead_source" name="lead_
 <option>Property Research &amp; Marketing</option>
 <option>Settlement Services</option>
 <option>Valuation and Validation</option></select><br /><br /></td></tr></table>
-<textarea id="00N50000001ZDL2" name="00N50000001ZDL2" rows="2" type="text" wrap="soft">Comments</textarea>
+<textarea id="00N50000001ZDL2" name="00N50000001ZDL2" rows="2" type="text" wrap="soft" placeholder="Comments"></textarea>
 <table width="<?php echo $width; ?>" cellpadding="0" cellspacing="0">
 <?php if(is_page_template('dqdirect.php')) { ?>
 <tr><td><div style="float:right; margin: 7px 10px 8px 0; display: inline">*Required Fields</div></td></tr>
@@ -127,7 +127,7 @@ hear about us?*</label></td><td width="166"><select id="lead_source" name="lead_
 <div class="recaptchahere">
 <?php
 switch($_SERVER['SERVER_NAME']) {
-	case 'ninthlink.me':
+	case 'dataquick.ninthlink.me':
 		$publickey = "6Lf7R94SAAAAAA2nldFqOsMBhEamxUQ-zf_M1MIS";
 		break;
 	default:
