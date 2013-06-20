@@ -4,7 +4,7 @@ require_once('recaptchalib.php');
 
 // Get a key from https://www.google.com/recaptcha/admin/create
 switch($_SERVER['SERVER_NAME']) {
-	case 'ninthlink.me':
+	case 'dataquick.ninthlink.me':
 		$publickey = "6Lf7R94SAAAAAA2nldFqOsMBhEamxUQ-zf_M1MIS";
 		$privatekey = "6Lf7R94SAAAAAIFXqcDB6rEE-fx82pLJcekCSyUQ";
 		break;
