@@ -259,15 +259,18 @@ jQuery(function($) {
 			frm.data('origact', frm.attr('action'));
 			
 			$(this).change(function() {
-				var sendto = $('option:selected', this).attr('sendto');
-				var frm = $(this).parents('form');
-				switch(sendto) {
-					case 'wtol':
-						frm.attr('action', 'https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8');
-						break;
-					default:
-						frm.attr('action', frm.data('origact'));
-						break;	
+				if ( $('.dqproductline').val() == "Data and Analytics" ) 
+				{
+					var sendto = $('option:selected', this).attr('sendto');
+					var frm = $(this).parents('form');
+					switch(sendto) {
+						case 'wtol':
+							frm.attr('action', 'https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8');
+							break;
+						default:
+							frm.attr('action', frm.data('origact'));
+							break;	
+					}
 				}
 			}).trigger('change');
 		});
