@@ -753,8 +753,9 @@ var _typeface_js = {
 // IE won't accept real selectors...
 var typefaceSelectors = ['.typeface-js', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-if (document.createStyleSheet) { 
-
+//if (document.createStyleSheet) { 
+if (document.createStyleSheet && (typeof document.createStyleSheet == "object")) {
+	
 	var styleSheet = document.createStyleSheet();
 	for (var i = 0; i < typefaceSelectors.length; i++) {
 		var selector = typefaceSelectors[i];
