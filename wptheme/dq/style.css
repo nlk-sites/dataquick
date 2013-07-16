@@ -262,7 +262,7 @@ body.dir { background: url(images/lbg.jpg) no-repeat 50% 0; }
 .dir #frap { background: none; border-top: 3px solid #60030a }
 #dleft { float: left; width: 635px; margin-right: 6px }
 #dleft ul { position: relative; left: -2em }
-#dright { float: left; width: 312px }
+#dright { float: left; width: 312px; position: relative; }
 .dir #top { padding: 0; height: 407px }
 .dir h1 { font: 42px/44px "ArialRoundedMTBold"; margin: 16px 0 5px }
 .dir #top h2 { font-size: 19px; line-height: 24px }
@@ -278,7 +278,8 @@ body.dir { background: url(images/lbg.jpg) no-repeat 50% 0; }
 .dir input.text { width: 123px }
 .dir input.text.zip { width: 50px }
 .dir .chk { margin-bottom: 29px }
-.dblk { float: left; width: 308px; margin-top: 16px; border: 1px solid #ccc; padding-bottom: 17px  }
+.dblk { float: left; width: 308px; margin-top: 16px; border: 1px solid #ccc; padding-bottom: 17px; position: absolute; top: 504px; }
+.dblk.so { top: 650px; }
 .dblk a { color: #333; text-decoration: none }
 .dblk h3 { float: left; width: 308px; height: 40px; background: url(images/dblkh3.png) repeat-x 0 0 }
 .dblk .spacer { float: left; margin: 8px 24px 0 }
@@ -290,3 +291,86 @@ body.dir { background: url(images/lbg.jpg) no-repeat 50% 0; }
 #dright .gform_wrapper { margin: 0 }
 #dright .gform_wrapper textarea.small { margin: 0; height: 65px }
 #dright .gform_wrapper .gform_footer { margin: 17px 24px; padding: 0 }
+
+select.dqproductline { max-width: 166px; }
+
+/* form by id */
+#gform_wrapper_10,
+#gform_wrapper_2
+{
+        display: block !important;
+}
+
+#gform_10,
+#gform_2
+{
+	height: 460px;
+}
+
+#gform_10 .gform_page_fields,
+#gform_2 .gform_page_fields
+{
+	height: 354px;
+}
+
+/* progress bar */
+#gf_progressbar_wrapper_10,
+#gf_progressbar_wrapper_2
+{
+	width: 88%;
+	margin-left: 20px;
+	padding: 0 !important;
+	border: none !important;
+}
+
+/* buttons */
+#gform_10 .gform_page_footer,
+#gform_2 .gform_page_footer
+{
+	position: relative;
+	top: 0px;
+	border: none !important;
+	width: auto !important;
+        margin: 0px !important;
+        padding: 0px !important;
+}
+#gform_10 .gform_page_footer .button,
+#gform_2 .gform_page_footer .button
+{
+	border: none;
+	width: 132px;
+	height: 36px;
+	/*font-size: 30px;*/
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	background: url(http://www.dataquick.com/wp-content/themes/dq/images/direct_sub.png) no-repeat 0 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.65);
+	background-size: 100%;
+}
+#gform_submit_button_10,
+#gform_submit_button_2
+{
+        margin-right: 0px !important;
+}
+
+/* product choices formatting */
+.gfield_option_10_15, .gfield_quantity_10_15, .gfield_option_10_57, .gfield_quantity_10_57,
+.gfield_option_10_79, .gfield_quantity_10_79, .gfield_option_10_93, .gfield_quantity_10_93
+{
+	width: 120px;
+	display: inline;
+	padding-right: 10px;
+	float: left;
+	clear: none !important;
+}
+
+#field_10_65 dl dt {margin: 0 0 6px 0;}
+#field_10_65 dl dd {line-height: 4px;}
+.disappeared { position:absolute; left:-500px; top:-500px; }
+#gform_page_10_7 dl {margin-bottom: 2px !important;}
+#gform_page_10_7 dd {
+display: inline-block;
+width: 100px;
+}
