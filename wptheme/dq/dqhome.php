@@ -44,22 +44,11 @@ get_header(); ?>
 <a href="<?php echo get_permalink(2965); ?>" class="more">More in Research Highlight &raquo;</a>
 </div>
 <div class="b dqb">
-<a href="blog/" class="hdr"><span class="typeface-js">DataQuick Blog</span><span class="ar"></span></a>
+<a href="ratecalculators/" class="hdr"><span class="typeface-js">Rate Calculator</span><span class="ar"></span></a>
 <div class="inside">
-<?php
-global $post;
-$myposts = get_posts('numberposts=2&cat=-1,-5,-6,-7');
-foreach($myposts as $post) :
-//	echo '<pre style="display:none">'. print_r($post,true) .'</pre>';
-echo '<h3><a href="'. get_permalink() .'">'. dq_spaceoff(get_the_title(),41) .'</a></h3><p>';
-if($post->post_excerpt) {
-	echo $post->post_excerpt;
-} else {
-	echo dq_spaceoff(strip_tags($post->post_content));
-}
-echo '<br /><a href="'. get_permalink() .'">READ MORE</a></p>';
-endforeach;
-?>
+<h3><a href="ratecalculators/">Premium Rate Calculator</a></h3>
+	<p>DataQuick Title offers fast and easy access to a rate calculator. Get quick rates with just a few clicks directly from the DataQuick Title website.<br />
+	<a href="ratecalculators/">READ MORE</a></p>
 </div>
 <a href="blog/" class="more">More in DQ Blog &raquo;</a>
 </div>
