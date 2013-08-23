@@ -44,12 +44,12 @@ get_header(); ?>
 <a href="<?php echo get_permalink(2965); ?>" class="more">More in Research Highlight &raquo;</a>
 </div>
 <div class="b dqb">
-<a href="ratecalculators/" class="hdr"><span class="typeface-js">Rate Calculator</span><span class="ar"></span></a>
-<div class="inside">
-<h3><a href="ratecalculators/">Premium Rate Calculator</a></h3>
-	<p>DataQuick Title offers fast and easy access to a rate calculator. Get quick rates with just a few clicks directly from the DataQuick Title website.<br />
-	<a href="ratecalculators/">READ MORE</a></p>
-</div>
-<a href="blog/" class="more">More in DQ Blog &raquo;</a>
+	<a href="ratecalculators/" class="hdr"><span class="typeface-js">Rate Calculator</span><span class="ar"></span></a>
+	<div class="inside">
+		<h3><a href="ratecalculators/">Premium Rate Calculator</a></h3>
+		<p>DataQuick Title offers fast and easy access to a rate calculator. Get quick rates with just a few clicks directly from the DataQuick Title website.<br />
+			<a href="ratecalculators/">READ MORE</a>
+		</p>
+	</div>
 </div>
 <?php get_footer(); ?>
