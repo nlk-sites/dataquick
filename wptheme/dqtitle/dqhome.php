@@ -35,8 +35,8 @@ readfile('http://www.dataquick.com/researchhighlighthelper/');
 	<a href="ratecalculators/" class="hdr"><span class="typeface-js">Rate Calculator</span><span class="ar"></span></a>
 	<div class="inside">
 		<h3><a href="ratecalculators/">Premium Rate Calculator</a></h3>
-		<p>DataQuick Title offers fast and easy access to a rate calculator. Get quick rates with just a few clicks directly from the DataQuick Title website.<br />
-			<a href="ratecalculators/">READ MORE</a>
+		<p>DataQuick Title offers fast and easy access to a rate calculator. Get quick rates with just a few clicks directly from the DataQuick Title website.<br /><br />
+			<a href="ratecalculators/">Access Rate Calculator »</a>
 		</p>
 	</div>
 </div>
