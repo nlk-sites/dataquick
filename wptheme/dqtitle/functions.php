@@ -255,7 +255,8 @@ function set_post_content( $entry, $form ) {
 
     /* * * * * * CHANGE $sendto FOR PRODUCTION * * * * * */
     // Test site...
-    $sendto = "https://test.webservices.rels.info/gofer/receiver.aspx";
+    $sendto = 'https://webservices.dataquick.com/gofer/receiver.aspx';
+    //$sendto = "https://test.webservices.rels.info/gofer/receiver.aspx";   //old send to
     // Production site...
     // $sendto = "https://webservices.rels.info/gofer/receiver.aspx";
 
