@@ -272,7 +272,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 		'<PREFERRED_RESPONSE _Destination="' . $entry['7'] . '" />'.
 	'</SUBMITTING_PARTY>'.
 	'<REQUEST RequestDatetime="' . date('n/d/Y g:i:s A', strtotime($entry['date_created'])) . '">'. // 4/15/2013 7:29:42 PM
-		'<KEY _Name="OrderNumber" _Value="' . 'RTW' . ( 20000000 + $entry['id'] ) . '" />'. // RTW10000531
+		'<KEY _Name="OrderNumber" _Value="' . 'RTW' . ( 30000000 + $entry['id'] ) . '" />'. // RTW10000531
 		'<KEY _Name="OrderRecordID" _Value="" />'. //
 		'<KEY _Name="VendorID" _Value="99999" />'. // '99999'
 		'<KEY _Name="ORSTransactionID" _Value="" />'.
@@ -312,7 +312,7 @@ $xml = '<?xml version="1.0" encoding="utf-8"?>'.
 				'</BORROWER>'.
 				'<LOAN_PURPOSE />'.
 				'<MORTGAGE_TERMS BorrowerRequestedLoanAmount="' . validate_number($entry['29']) . 
-						'" LenderCaseIdentifier="' . 'LOAN' . ( 20000000 + $entry['id'] ) . 
+						'" LenderCaseIdentifier="' . 'LOAN' . ( 30000000 + $entry['id'] ) . 
 						'" MortgageType="' . $entry['28'] . 
 						'" LoanEstimatedClosingDate="' . date('m/d/Y', strtotime($entry['36'])) . '" />'. // 04/30/2013
 				'<PROPERTY _StreetAddress="' . $entry['45'] . 
