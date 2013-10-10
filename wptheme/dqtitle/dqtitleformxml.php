@@ -70,6 +70,7 @@ function format_phone_us($phone = '', $convert = true, $trim = true)
 function validate_number($number)
 {
 	$number = preg_replace('/[A-Za-z\$]/', '', $number);
+	$number = (int) $number;
 	$number = number_format($number, 0, '', '');
 	return $number;
 }
