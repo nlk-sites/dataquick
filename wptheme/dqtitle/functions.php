@@ -257,15 +257,15 @@ function set_post_content( $entry, $form ) {
     // Test site...
     $sendto = 'https://test.webservices.dataquick.com/gofer/receiver.aspx';
     // Production site...
-    // $sendto = "https://test.webservices.dataquick.com/gofer/receiver.aspx";
+    //$sendto = "https://webservices.dataquick.com/gofer/receiver.aspx";
 
     //begin curl submit
     if ( isset($sendto) ):
         $ch = curl_init($sendto);
         //$fp = fopen("xml_file.txt", "w");
-        curl_setopt($ch, CURLOPT_MUTE, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        //curl_setopt($ch, CURLOPT_MUTE, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
@@ -282,7 +282,7 @@ function set_post_content( $entry, $form ) {
     // end curl
 
     // Send email for debugging purposes -> COMMENT OUT FOR PRODUCTION
-    mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 30000000 + $entry['id'] ) . ')', $resultant);
+    //mail($entry['7'], 'DQTitle PlaceOrder debug (RTW' . ( 20000000 + $entry['id'] ) . ')', $resultant);
     // Production email confirmation send...
     mail($entry['7'], $subject, $body, $headers);
 }
@@ -291,7 +291,7 @@ function set_post_content( $entry, $form ) {
 // fire the action for all forms
 // add_action( 'gform_post_submission', 'my_remove_entries', 10, 2 );
 // to only fire the action for a specific form (form ID 1)...
-add_action( 'gform_post_submission_1', 'my_remove_entries', 10, 2 );
+add_action( 'gform_post_submission_2', 'my_remove_entries', 10, 2 );
 function my_remove_entries( $entry, $form ) {
         global $wpdb;
         $lead_id                = $entry['id'];
@@ -317,7 +317,7 @@ function my_remove_entries( $entry, $form ) {
 
 
 // Custom action to display Selected Office of page 3 of place order form (form ID 1)
-add_filter("gform_pre_render_1", "populate_html");
+add_filter("gform_pre_render_2", "populate_html");
 function populate_html($form)
 {
     $current_page = GFFormDisplay::get_current_page($form["id"]);
