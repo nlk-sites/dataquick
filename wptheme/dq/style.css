@@ -20,7 +20,7 @@ a img { border: none }
 #page { display: block; width: 978px; margin: 0 auto; text-align: left }
 #hdr { float: left; width: 978px; height: 99px; position: relative; background:url(images/tab.png) no-repeat 719px 0; z-index:2 }
 #hdr a { color: #333; text-decoration: none }
-#hdr .contact { position: absolute; top: 60px; right: 26px; font: 16px/143% "Helvetica Neue"; z-index: 2 }
+#hdr .contact { position: absolute; top: 60px; right: 6px; font: 16px/143% "Helvetica Neue"; z-index: 2 }
 #hdr .contact a { text-decoration: none; color:#333 }
 #dq { float: left; width: 196px; height: 63px; margin: 15px 0 0 18px; text-indent:-999em; background: url(images/logo.png) no-repeat 0 0 }
 #ipc { float: left; margin: 62px 0 0 58px; padding: 0; list-style: none; position: relative; z-index: 3 }
