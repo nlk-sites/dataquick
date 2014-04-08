@@ -179,7 +179,7 @@ switch($_SERVER['SERVER_NAME']) {
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="chk webtolead" style="display: none;">
 
 <input type=hidden name="oid" value="00D500000006jOn">
 <input type=hidden name="retURL" value="http://www.dataquick.com/contactusthanks.asp?">
@@ -590,6 +590,7 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="Partner Relations">Partner Relations</option>
 </select><br>
 
-<input type="submit" name="submit">
+<input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" />
+<!--input type="submit" name="submit"-->
 
 </form>
