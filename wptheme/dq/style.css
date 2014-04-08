@@ -176,8 +176,8 @@ h3.b.h1.blue a strong { color: #00788e; background-image: url(images/harb.gif) }
 .b .gform_wrapper form.chk { display: block }
 .b .gform_wrapper { float: left; width: 100%; display: none }
 .b form.chk label { display: inline-block; margin: 4px 0 6px 8px; line-height:16px; width: 100px; vertical-align: top; }
-.b form.chk textarea { padding: 8px 6px; margin: 10px 0px 10px 4px;  }
-.b form.chk textarea, .b form.chk input, .b form.chk select { font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 200px; }
+.b form.chk textarea { padding: 8px 6px; margin: 10px 0;  }
+.b form.chk textarea, .b form.chk input[type="text"], .b form.chk select { font-size: 13px; font-family: Arial, Helvetica, sans-serif; width: 200px; }
 .b form.chk .err { border-color: #f00 }
 
 .b.get#hac { position: absolute; right: 1px; bottom: 337px; z-index:11; width: 337px; padding: 0; margin: 0; background: url(images/bl_grep.gif) repeat-y 0 0 }
