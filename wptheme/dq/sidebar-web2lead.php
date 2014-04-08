@@ -569,6 +569,19 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="Risk (Portfolio)">Risk (Portfolio)</option>
 <option value="Partner Relations">Partner Relations</option>
 </select><br>
+<div class="recaptchahere">
+<?php
+switch($_SERVER['SERVER_NAME']) {
+	case 'dataquick.ninthlink.me':
+		$publickey = "6Lf7R94SAAAAAA2nldFqOsMBhEamxUQ-zf_M1MIS";
+		break;
+	default:
+		$publickey = "6Ld0jtMSAAAAAKeGm9kE7WtPpvTp-ln2IshUniE8";
+		break;
+}
+?>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=<?php esc_attr_e( $publickey ); ?>"></script>
+</div>
 <br />
 <input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" align="right" />
 <!--input type="submit" name="submit"-->
