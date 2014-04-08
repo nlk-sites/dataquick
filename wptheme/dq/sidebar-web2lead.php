@@ -172,14 +172,6 @@ switch($_SERVER['SERVER_NAME']) {
 <input type=hidden name="oid" value="00D500000006jOn">
 <input type=hidden name="retURL" value="<?php echo get_permalink(367); ?>">
 
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="dbadillo@dataquick.com">                                         -->
-<!--  ----------------------------------------------------------------------  -->
-
 <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
 <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
@@ -577,8 +569,10 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="Risk (Portfolio)">Risk (Portfolio)</option>
 <option value="Partner Relations">Partner Relations</option>
 </select><br>
+<br />
+<br />
 
-<input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" />
+<input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" align="right" />
 <!--input type="submit" name="submit"-->
 
 </form>
