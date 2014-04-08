@@ -374,3 +374,16 @@ select.dqproductline { max-width: 166px; }
 display: inline-block;
 width: 100px;
 }
+
+
+
+.page-template-dqcontact-php label {
+	display: inline-block;
+	padding-left: 20px;
+	vertical-align: top;
+	width: 100px;
+}
+.page-template-dqcontact-php input[type="text"],
+.page-template-dqcontact-php select {
+	width: 200px;
+}

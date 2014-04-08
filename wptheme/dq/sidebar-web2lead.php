@@ -387,7 +387,8 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="012500000001Qtt">Rels Lead</option>
 </select><br>
 
-Business Structure:<select  id="00N50000001Ueqd" name="00N50000001Ueqd" title="Business Structure"><option value="">--None--</option><option value="Sub S Corp">Sub S Corp</option>
+<label>Business Structure:</label>
+<select  id="00N50000001Ueqd" name="00N50000001Ueqd" title="Business Structure"><option value="">--None--</option><option value="Sub S Corp">Sub S Corp</option>
 <option value="LLC">LLC</option>
 <option value="Partnership">Partnership</option>
 <option value="Limited Partnership">Limited Partnership</option>
@@ -398,9 +399,9 @@ Business Structure:<select  id="00N50000001Ueqd" name="00N50000001Ueqd" title="B
 <option value="C Corp">C Corp</option>
 </select><br>
 
-Date Business Started:<input  id="00N50000001Ueqg" maxlength="16" name="00N50000001Ueqg" size="20" type="text" /><br>
+<label>Date Business Started:</label><input  id="00N50000001Ueqg" maxlength="16" name="00N50000001Ueqg" size="20" type="text" /><br>
 
-Bank Account Type:<select  id="00N50000001Ueql" name="00N50000001Ueql" title="Bank Account Type"><option value="">--None--</option><option value="Premier Business Checking">Premier Business Checking</option>
+<label>Bank Account Type:</label><select  id="00N50000001Ueql" name="00N50000001Ueql" title="Bank Account Type"><option value="">--None--</option><option value="Premier Business Checking">Premier Business Checking</option>
 <option value="Basic Business Checking">Basic Business Checking</option>
 <option value="Commercial Checking">Commercial Checking</option>
 <option value="Business Line of Credit">Business Line of Credit</option>
@@ -422,17 +423,17 @@ Bank Account Type:<select  id="00N50000001Ueql" name="00N50000001Ueql" title="Ba
 <option value="Totally Free Business Checking">Totally Free Business Checking</option>
 </select><br>
 
-Business Stage:<select  id="00N50000001Ueqo" name="00N50000001Ueqo" title="Business Stage"><option value="">--None--</option><option value="High Growth">High Growth</option>
+<label>Business Stage:</label><select  id="00N50000001Ueqo" name="00N50000001Ueqo" title="Business Stage"><option value="">--None--</option><option value="High Growth">High Growth</option>
 <option value="Stable/Mature">Stable/Mature</option>
 <option value="Preparing to Sell">Preparing to Sell</option>
 <option value="Startup">Startup</option>
 </select><br>
 
-Primary Bank Name:<input  id="00N50000001Ueqp" maxlength="20" name="00N50000001Ueqp" size="20" type="text" /><br>
+<label>Primary Bank Name:</label><input  id="00N50000001Ueqp" maxlength="20" name="00N50000001Ueqp" size="20" type="text" /><br>
 
-Gross Annual Sales:<input  id="00N50000001Uequ" name="00N50000001Uequ" size="20" type="text" /><br>
+<label>Gross Annual Sales:</label><input  id="00N50000001Uequ" name="00N50000001Uequ" size="20" type="text" /><br>
 
-Business Type:<select  id="00N50000001Ueqv" name="00N50000001Ueqv" title="Business Type"><option value="">--None--</option><option value="Broker/B2B">Broker/B2B</option>
+<label>Business Type:</label><select  id="00N50000001Ueqv" name="00N50000001Ueqv" title="Business Type"><option value="">--None--</option><option value="Broker/B2B">Broker/B2B</option>
 <option value="Credit Union">Credit Union</option>
 <option value="Mortgage Lender">Mortgage Lender</option>
 <option value="National Bank">National Bank</option>
@@ -444,7 +445,7 @@ Business Type:<select  id="00N50000001Ueqv" name="00N50000001Ueqv" title="Busine
 <option value="Other">Other</option>
 </select><br>
 
-Sales Team:<select  id="00N50000001Uer1" name="00N50000001Uer1" title="Sales Team"><option value="">--None--</option><option value="All Products and Services">All Products and Services</option>
+<label>Sales Team:</label><select  id="00N50000001Uer1" name="00N50000001Uer1" title="Sales Team"><option value="">--None--</option><option value="All Products and Services">All Products and Services</option>
 <option value="Customer Acquisition">Customer Acquisition</option>
 <option value="Residential Credit Solutions">Residential Credit Solutions</option>
 <option value="Collateral Valuation Solutions">Collateral Valuation Solutions</option>
@@ -460,15 +461,15 @@ Sales Team:<select  id="00N50000001Uer1" name="00N50000001Uer1" title="Sales Tea
 <option value="Self-Sign">Self-Sign</option>
 </select><br>
 
-Department:<input  id="00N50000001ZDLG" maxlength="55" name="00N50000001ZDLG" size="20" type="text" /><br>
+<label>Department:</label><input  id="00N50000001ZDLG" maxlength="55" name="00N50000001ZDLG" size="20" type="text" /><br>
 
-Address 1:<input  id="00N50000001ZDLQ" maxlength="55" name="00N50000001ZDLQ" size="20" type="text" /><br>
+<label>Address 1:</label><input  id="00N50000001ZDLQ" maxlength="55" name="00N50000001ZDLQ" size="20" type="text" /><br>
 
-Address 2:<input  id="00N50000001ZDLV" maxlength="55" name="00N50000001ZDLV" size="20" type="text" /><br>
+<label>Address 2:</label><input  id="00N50000001ZDLV" maxlength="55" name="00N50000001ZDLV" size="20" type="text" /><br>
 
-City 1:<input  id="00N50000001ZDLa" maxlength="55" name="00N50000001ZDLa" size="20" type="text" /><br>
+<label>City 1:</label><input  id="00N50000001ZDLa" maxlength="55" name="00N50000001ZDLa" size="20" type="text" /><br>
 
-Dept:<select  id="00N50000001r3en" name="00N50000001r3en" title="Dept"><option value="">--None--</option><option value="1st Mortgage">1st Mortgage</option>
+<label>Dept:</label><select  id="00N50000001r3en" name="00N50000001r3en" title="Dept"><option value="">--None--</option><option value="1st Mortgage">1st Mortgage</option>
 <option value="Appraisal">Appraisal</option>
 <option value="Customer Service">Customer Service</option>
 <option value="Data Management">Data Management</option>
@@ -486,20 +487,20 @@ Dept:<select  id="00N50000001r3en" name="00N50000001r3en" title="Dept"><option v
 <option value="Other">Other</option>
 </select><br>
 
-ZipCode:<input  id="00N50000001ZDLk" maxlength="5" name="00N50000001ZDLk" size="20" type="text" /><br>
+<label>ZipCode:</label><input  id="00N50000001ZDLk" maxlength="5" name="00N50000001ZDLk" size="20" type="text" /><br>
 
-CurrentCustomer:<input  id="00N50000001ZDLp" name="00N50000001ZDLp" type="checkbox" value="1" /><br>
+<label>CurrentCustomer:</label><input  id="00N50000001ZDLp" name="00N50000001ZDLp" type="checkbox" value="1" /><br>
 
-Preferred Method of Contact:<select  id="00N50000001ZDLu" name="00N50000001ZDLu" title="Preferred Method of Contact"><option value="">--None--</option><option value="Email">Email</option>
+<label>Preferred Method of Contact:</label><select  id="00N50000001ZDLu" name="00N50000001ZDLu" title="Preferred Method of Contact"><option value="">--None--</option><option value="Email">Email</option>
 <option value="Fax">Fax</option>
 <option value="Telephone">Telephone</option>
 <option value="U.S. Postal Service">U.S. Postal Service</option>
 <option value="Unknown">Unknown</option>
 </select><br>
 
-Comments:<textarea  id="00N50000001ZDL2" name="00N50000001ZDL2" rows="3" type="text" wrap="soft"></textarea><br>
+<label>Comments:</label><textarea  id="00N50000001ZDL2" name="00N50000001ZDL2" rows="3" type="text" wrap="soft"></textarea><br>
 
-State:<select  id="00N50000001ZDLf" name="00N50000001ZDLf" title="State"><option value="">--None--</option><option value="AL">AL</option>
+<label>State:</label><select  id="00N50000001ZDLf" name="00N50000001ZDLf" title="State"><option value="">--None--</option><option value="AL">AL</option>
 <option value="AK">AK</option>
 <option value="AZ">AZ</option>
 <option value="AR">AR</option>
@@ -553,9 +554,9 @@ State:<select  id="00N50000001ZDLf" name="00N50000001ZDLf" title="State"><option
 <option value="WY">WY</option>
 </select><br>
 
-Other Lead Source:<input  id="00N50000001ZXJu" maxlength="100" name="00N50000001ZXJu" size="20" type="text" /><br>
+<label>Other Lead Source:</label><input  id="00N50000001ZXJu" maxlength="100" name="00N50000001ZXJu" size="20" type="text" /><br>
 
-Industry Subgroup:<select  id="00N50000001sVyR" name="00N50000001sVyR" title="Industry Subgroup"><option value="">--None--</option><option value="City">City</option>
+<label>Industry Subgroup:</label><select  id="00N50000001sVyR" name="00N50000001sVyR" title="Industry Subgroup"><option value="">--None--</option><option value="City">City</option>
 <option value="County">County</option>
 <option value="Colleges/Universities/Schools/Libraries">Colleges/Universities/Schools/Libraries</option>
 <option value="Federal">Federal</option>
@@ -564,7 +565,7 @@ Industry Subgroup:<select  id="00N50000001sVyR" name="00N50000001sVyR" title="In
 <option value="Other">Other</option>
 </select><br>
 
-Product Line:<select  id="00N50000002oobw" name="00N50000002oobw" title="Product Line"><option value="">--None--</option><option value="Credit">Credit</option>
+<label>Product Line:</label><select  id="00N50000002oobw" name="00N50000002oobw" title="Product Line"><option value="">--None--</option><option value="Credit">Credit</option>
 <option value="Data and Analytics">Data and Analytics</option>
 <option value="Decisioning">Decisioning</option>
 <option value="Flood">Flood</option>
@@ -572,7 +573,7 @@ Product Line:<select  id="00N50000002oobw" name="00N50000002oobw" title="Product
 <option value="Valuation and Validation">Valuation and Validation</option>
 </select><br>
 
-Dept 2 (Specify):<select  id="00N50000002mbq1" name="00N50000002mbq1" title="Dept 2 (Specify)"><option value="">--None--</option><option value="Sales/Marketing">Sales/Marketing</option>
+<label>Dept 2 (Specify):</label><select  id="00N50000002mbq1" name="00N50000002mbq1" title="Dept 2 (Specify)"><option value="">--None--</option><option value="Sales/Marketing">Sales/Marketing</option>
 <option value="Operations">Operations</option>
 <option value="Risk/Compliance">Risk/Compliance</option>
 <option value="QC">QC</option>
