@@ -170,7 +170,7 @@ switch($_SERVER['SERVER_NAME']) {
 <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="chk webtolead" style="display: none;">
 
 <input type=hidden name="oid" value="00D500000006jOn">
-<input type=hidden name="retURL" value="http://www.dataquick.com/contactusthanks.asp?">
+<input type=hidden name="retURL" value="<?php echo get_permalink(367); ?>">
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
