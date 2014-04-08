@@ -113,7 +113,7 @@ switch($_SERVER['SERVER_NAME']) {
 </table>
 </form>
 */ ?>
-<form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="chk webtocase">
+<form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="chk webtocase" style="display:none;">
 
 <input type=hidden name="orgid" value="00D500000006jOn">
 <input type=hidden name="retURL" value="http://www.dataquick.com/contactusthanks.asp">
@@ -301,7 +301,7 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="Mac">Mac</option>
 </select><br>
 
-Operating System:<select  id="00N50000001r35F" name="00N50000001r35F" title="Operating System"><option value="">--None--</option><option value="Win 95">Win 95</option>
+<label>Operating System:</label><select  id="00N50000001r35F" name="00N50000001r35F" title="Operating System"><option value="">--None--</option><option value="Win 95">Win 95</option>
 <option value="Win 98">Win 98</option>
 <option value="Win NT">Win NT</option>
 <option value="Win 2000">Win 2000</option>
@@ -399,8 +399,6 @@ Operating System:<select  id="00N50000001r35F" name="00N50000001r35F" title="Ope
 
 <input type="hidden"  id="external" name="external" value="1" /><br>
 <br />
-<br />
-
 <input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" align="right" />
 <!--input type="submit" name="submit"-->
 

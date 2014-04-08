@@ -570,8 +570,6 @@ switch($_SERVER['SERVER_NAME']) {
 <option value="Partner Relations">Partner Relations</option>
 </select><br>
 <br />
-<br />
-
 <input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" align="right" />
 <!--input type="submit" name="submit"-->
 
