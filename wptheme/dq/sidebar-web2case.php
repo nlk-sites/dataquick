@@ -116,7 +116,7 @@ switch($_SERVER['SERVER_NAME']) {
 <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="chk webtocase" style="display:none;">
 
 <input type=hidden name="orgid" value="00D500000006jOn">
-<input type=hidden name="retURL" value="http://www.dataquick.com/contactusthanks.asp">
+<input type=hidden name="retURL" value="<?php echo get_permalink(367); ?>">
 
 <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
