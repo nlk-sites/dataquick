@@ -138,6 +138,8 @@ if($campaignID != '') {
 			<td width="146">
 				<label for="lead_source">Where did you<br />hear about us?*</label>
 			</td>
+		</tr>
+		<tr>
 			<td width="166">
 				<select  id="lead_source" name="lead_source">
 					<option value="">--None--</option>
@@ -190,6 +192,8 @@ if($campaignID != '') {
 			<td>
 				<label>What product line are you interested in?</label>
 			</td>
+		</tr>
+		<tr>
 			<td>
 				<select  id="00N50000002oobw" name="00N50000002oobw" title="Product Line">
 					<option value="">--None--</option>
@@ -208,6 +212,8 @@ if($campaignID != '') {
 			<td>
 				<label for="industry">What industry<br />are you in?*</label>
 			</td>
+		</tr>
+		<tr>
 			<td>
 				<select  id="industry" name="industry">
 					<option value="">--None--</option>

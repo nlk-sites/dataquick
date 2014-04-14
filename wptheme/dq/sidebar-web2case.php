@@ -91,6 +91,8 @@ if($submit == '' ) $submit = 'GET ACCESS';
 				<td width="146">
 					<label for="00N50000001r355">DQ Product</label>
 				</td>
+			</tr>
+			<tr>
 				<td width="166">
 					<select  id="00N50000001r355" name="00N50000001r355" title="DQ Product">
 						<option value="">--None--</option>
@@ -143,6 +145,8 @@ if($submit == '' ) $submit = 'GET ACCESS';
 				<td width="146">
 					<label>What product line are you inquiring about?</label>
 				</td>
+			</tr>
+			<tr>
 				<td width="166">
 					<select  id="00N50000002orOs" name="00N50000002orOs" title="Product Line">
 						<option value="">--None--</option>
