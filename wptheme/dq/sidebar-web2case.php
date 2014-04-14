@@ -92,7 +92,7 @@ if($submit == '' ) $submit = 'GET ACCESS';
 					<label for="00N50000001r355">DQ Product</label>
 				</td>
 			</tr>
-			<tr>
+			<tr style="display:none">
 				<td width="166">
 					<select  id="00N50000001r355" name="00N50000001r355" title="DQ Product">
 						<option value="">--None--</option>

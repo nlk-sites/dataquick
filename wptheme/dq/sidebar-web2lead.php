@@ -301,6 +301,8 @@ if($campaignID != '') {
 				<td>
 					<label>*Required Fields</label>
 				</td>
+			</tr>
+			<tr>
 				<td align="right">
 					<input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/<?php echo is_page_template('dqdirect.php') ? 'direct_sub' : 'contact_sub'; ?>.png" />
 				</td>
