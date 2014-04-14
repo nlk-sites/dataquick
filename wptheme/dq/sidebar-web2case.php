@@ -203,6 +203,8 @@ if($submit == '' ) $submit = 'GET ACCESS';
 				<td>
 					<label>*Required Fields</label>
 				</td>
+			</tr>
+			<tr>
 				<td align="right">
 					<input type="hidden"  id="external" name="external" value="1" />
 					<input type="image" name="submit" value="SUBMIT" src="<?php bloginfo('template_url'); ?>/images/contact_sub.png" />
