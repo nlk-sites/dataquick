@@ -141,50 +141,20 @@ if($campaignID != '') {
 		</tr>
 		<tr>
 			<td width="166">
-				<select  id="lead_source" name="lead_source">
-					<option value="">--None--</option>
-					<option value="FL Realtors Expo 2013">FL Realtors Expo 2013</option>
-					<option value="ASF January 2013">ASF January 2013</option>
-					<option value="REO to Rent Conf Nov 2012">REO to Rent Conf Nov 2012</option>
-					<option value="ABS East 2012">ABS East 2012</option>
+				<select  id="lead_source" name="lead_source"><option value="">--None--</option>
 					<option value="Advertisement">Advertisement</option>
 					<option value="Article">Article</option>
-					<option value="Ask">Ask</option>
-					<option value="Association">Association</option>
-					<option value="CBA June, 2011">CBA June, 2011</option>
-					<option value="Cold Call">Cold Call</option>
 					<option value="Direct Mail">Direct Mail</option>
-					<option value="DMP">DMP</option>
-					<option value="DQ Direct">DQ Direct</option>
-					<option value="DQ News Referral">DQ News Referral</option>
 					<option value="Email">Email</option>
 					<option value="Existing Customer">Existing Customer</option>
-					<option value="FDIC Target List">FDIC Target List</option>
-					<option value="Feb 2011 Mortgage Servicing Conference">Feb 2011 Mortgage Servicing Conference</option>
-					<option value="FiveStar 2011 Conference">FiveStar 2011 Conference</option>
 					<option value="Friend/Business Associate">Friend/Business Associate</option>
 					<option value="Google">Google</option>
-					<option value="Google Earth">Google Earth</option>
 					<option value="Internet/Web">Internet/Web</option>
-					<option value="MBAA Chicago 2011">MBAA Chicago 2011</option>
-					<option value="MDA Joint Initiative">MDA Joint Initiative</option>
-					<option value="MSB">MSB</option>
 					<option value="News/Newspaper/Magazine">News/Newspaper/Magazine</option>
 					<option value="Newsletter">Newsletter</option>
-					<option value="No Response">No Response</option>
-					<option value="Other">Other</option>
-					<option value="PCUA">PCUA</option>
-					<option value="Previous Customer">Previous Customer</option>
-					<option value="RealtyTrac">RealtyTrac</option>
 					<option value="Referral">Referral</option>
-					<option value="salesgenie">salesgenie</option>
-					<option value="Search Engine">Search Engine</option>
-					<option value="Title Referral">Title Referral</option>
 					<option value="Trade Show">Trade Show</option>
-					<option value="Upsell">Upsell</option>
-					<option value="USIS Referral">USIS Referral</option>
-					<option value="Webinar">Webinar</option>
-					<option value="Wells Fargo">Wells Fargo</option>
+					<option value="Other">Other</option>
 				</select>
 			</td>
 		</tr>
