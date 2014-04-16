@@ -135,7 +135,7 @@ if($campaignID != '') {
 
 	<table width="<?php echo $width; ?>" cellpadding="0" cellspacing="0">
 		<tr>
-			<td width="146">
+			<td>
 				<label for="lead_source">Where did you<br />hear about us?*</label>
 			</td>
 		</tr>

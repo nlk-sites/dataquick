@@ -142,12 +142,12 @@ if($submit == '' ) $submit = 'GET ACCESS';
 			</tr>
 
 			<tr valign="top">
-				<td width="146">
+				<td>
 					<label>What product line are you inquiring about?</label>
 				</td>
 			</tr>
 			<tr>
-				<td width="166">
+				<td>
 					<select  id="00N50000002orOs" name="00N50000002orOs" title="Product Line">
 						<option value="">--None--</option>
 						<option value="Credit">Credit</option>
