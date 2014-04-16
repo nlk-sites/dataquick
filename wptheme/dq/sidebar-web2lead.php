@@ -136,7 +136,7 @@ if($campaignID != '') {
 	<table width="<?php echo $width; ?>" cellpadding="0" cellspacing="0">
 		<tr>
 			<td>
-				<label for="lead_source">Where did you<br />hear about us?*</label>
+				<label for="lead_source">Where did you hear about us?*</label>
 			</td>
 		</tr>
 		<tr>
@@ -180,7 +180,7 @@ if($campaignID != '') {
 		</tr>
 		<tr>
 			<td>
-				<label for="industry">What industry<br />are you in?*</label>
+				<label for="industry">What industry are you in?*</label>
 			</td>
 		</tr>
 		<tr>
