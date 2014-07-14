@@ -235,12 +235,12 @@ ul.gfield_checkbox li input, ul.gfield_radio li input {
 	width: 20px !important;
 	float: left;
 }
-div#gform_page_1_3 label.gfield_label {
+div#gform_page_2_3 label.gfield_label {
 	font-weight: bold;
 }
 /* specific fields */
 /* select location... */
-li#field_1_86 {
+li#field_2_86 {
 	display: inline-block;
 	width: 620px;
 	margin-bottom: -30px !important;
@@ -248,7 +248,7 @@ li#field_1_86 {
 	z-index: 0;
 }
 
-li#field_1_1 {
+li#field_2_1 {
 	/* width: 160px; */
 	float: left;
 	padding-left: 22px;
@@ -264,14 +264,14 @@ li.offices {
 	position: relative;
 	/* clear: none !important; */
 }
-li#field_1_2 {
+li#field_2_2 {
 	padding-top: 60px;
 }
 
-li#field_1_1 label, li.offices label {
+li#field_2_1 label, li.offices label {
 	display: none !important;
 }
-li#field_1_1 #input_1_1 {
+li#field_2_1 #input_2_1 {
 	display: inline-block;
 	float: left;
 	max-width: 160px !important;
@@ -292,20 +292,20 @@ li.gfield .ginput_container .textarea {
 }
 
 /*
-li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
+li#field_2_36 div.clear-multi div, li#field_2_36 div.clear-multi select{
 	float: left;
 	width: 80px;
 	margin-right: 10px;
 }
 */
 
-li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
+li#field_2_36 div.clear-multi div, li#field_2_36 div.clear-multi select{
 	float: left;
 	width: 86px;;
 	/* margin-right: 5px;*/
 }
 
-#input_1_36_1, #input_1_36_2, #input_1_36_3 {
+#input_2_36_1, #input_2_36_2, #input_2_36_3 {
 	width: 40px !important;
 	margin-left: 4px;
 }
@@ -319,7 +319,7 @@ li#field_1_36 div.clear-multi div, li#field_1_36 div.clear-multi select{
 div.gform_page_footer {
 	border: none !important;
 }
-div.gform_page_footer input.button.gform_next_button, div.gform_page_footer input#gform_submit_button_1 {
+div.gform_page_footer input.button.gform_next_button, div.gform_page_footer input#gform_submit_button_2 {
 	display: inline-block;
 	float: left;
 	width: 120px !important;
@@ -385,4 +385,7 @@ div#gforms_confirmation_message {
 
 #rfx {
 	height: 70px;
+}
+.typeface-js-selected-text {
+	display:none !important;
 }
