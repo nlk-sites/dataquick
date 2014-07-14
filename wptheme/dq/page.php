@@ -33,7 +33,7 @@ if($demo_link) echo '<a href="'.$demo_link.'" rel="nofollow" class="ar" target="
 if($login_link) echo '<a href="'.$login_link.'" rel="nofollow" class="ar">Customer Login</a>';
 ?>
 <a href="<?php echo get_permalink(137); ?>" class="ar">Request more information</a>
-<div>Call 1 888.299.8787</div>
+<div>Call 1 888.774.3282</div>
 </div>
 <?php
 $attachments =& get_children('post_type=attachment&post_parent=' . $post->ID .'&orderby=menu_order&order=asc' );
