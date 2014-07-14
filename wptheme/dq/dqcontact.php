@@ -34,7 +34,7 @@ wp_link_pages( array( 'before' => '<div class="page-link">Pages:', 'after' => '<
 <p><strong>Sales Center Hours:</strong><br />
 Monday-Friday<br />
 8:30am to 5:00pm (PST)<br /><br />
-<strong>Sales Hotline:</strong> 1.888.774.DATA (3282)</p>
+<strong>Sales Hotline:</strong> 1.866.774.DATA (3282)</p>
 </div>
 <div class="b">
 <h3>Current Customers</h3>

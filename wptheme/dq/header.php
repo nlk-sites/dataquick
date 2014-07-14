@@ -56,7 +56,7 @@
         <ul id="ipc">
         <?php wp_list_pages('include=21,19,2965&title_li='); ?>
         </ul>
-        <div class="contact typeface-js"><a href="<?php echo get_permalink(137); ?>">Contact Us 1.888.774.3282 (DATA)</a></div>
+        <div class="contact typeface-js"><a href="<?php echo get_permalink(137); ?>">Contact Us 1.866.774.3282 (DATA)</a></div>
         <div id="drp"><div class="t"></div><div class="e"></div></div>
         <select name="ql" onchange="window.location.href = this.value;" id="ql">
           <option selected value="#">Customer Login</option>

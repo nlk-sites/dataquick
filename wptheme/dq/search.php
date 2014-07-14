@@ -35,7 +35,7 @@ get_header(); ?>
     <div class="b get c">
     <h3>Learn More</h3>
     <a href="<?php echo get_permalink(137); ?>" class="ar">Request more information</a>
-    <div>Call 1 888-774 DATA</div>
+    <div>Call 1 866-774 DATA</div>
     </div>
     </div>
 </div>

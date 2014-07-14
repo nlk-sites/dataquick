@@ -23,7 +23,7 @@
         </ul>
         <?php get_search_form(); ?>
         </div>
-        <div class="num typeface-js"><div><em>Contact Us</em>1-888-774-3282</div><div><em></em></div></div>
+        <div class="num typeface-js"><div><em>Contact Us</em>1-866-774-3282</div><div><em></em></div></div>
         <div class="so">Follow Us Online
         <ul>
         <li><a href="http://twitter.com/DataQuick" target="_blank" class="t" title="Twitter.com/DataQuick">Twitter</a></li>
